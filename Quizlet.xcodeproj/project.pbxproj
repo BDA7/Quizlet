@@ -25,6 +25,10 @@
 		FE87EA812BA60C7100710F3B /* HomeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA802BA60C7100710F3B /* HomeStateAction.swift */; };
 		FE87EA832BA60C8200710F3B /* HomeStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA822BA60C8200710F3B /* HomeStateReducer.swift */; };
 		FE87EA852BA60D3E00710F3B /* AppState+ScreenStateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA842BA60D3E00710F3B /* AppState+ScreenStateSelector.swift */; };
+		FE87EA8A2BA60F2000710F3B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA892BA60F2000710F3B /* ProfileView.swift */; };
+		FE87EA8C2BA60F7F00710F3B /* ProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA8B2BA60F7F00710F3B /* ProfileState.swift */; };
+		FE87EA8E2BA60F8900710F3B /* ProfileStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA8D2BA60F8900710F3B /* ProfileStateAction.swift */; };
+		FE87EA902BA60F9400710F3B /* ProfileStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA8F2BA60F9400710F3B /* ProfileStateReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		FE87EA802BA60C7100710F3B /* HomeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateAction.swift; sourceTree = "<group>"; };
 		FE87EA822BA60C8200710F3B /* HomeStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateReducer.swift; sourceTree = "<group>"; };
 		FE87EA842BA60D3E00710F3B /* AppState+ScreenStateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+ScreenStateSelector.swift"; sourceTree = "<group>"; };
+		FE87EA892BA60F2000710F3B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FE87EA8B2BA60F7F00710F3B /* ProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileState.swift; sourceTree = "<group>"; };
+		FE87EA8D2BA60F8900710F3B /* ProfileStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStateAction.swift; sourceTree = "<group>"; };
+		FE87EA8F2BA60F9400710F3B /* ProfileStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStateReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 		FE87EA592BA6020A00710F3B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FE87EA862BA60F0400710F3B /* Profile */,
 				FE87EA792BA60B8300710F3B /* Home */,
 				FE87EA5A2BA6023100710F3B /* Splash */,
 			);
@@ -237,6 +246,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FE87EA862BA60F0400710F3B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA882BA60F1800710F3B /* View */,
+				FE87EA872BA60F1400710F3B /* State */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FE87EA872BA60F1400710F3B /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA8B2BA60F7F00710F3B /* ProfileState.swift */,
+				FE87EA8D2BA60F8900710F3B /* ProfileStateAction.swift */,
+				FE87EA8F2BA60F9400710F3B /* ProfileStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FE87EA882BA60F1800710F3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA892BA60F2000710F3B /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,18 +346,22 @@
 				FE87EA6C2BA60A2B00710F3B /* AppScreenStateReducer.swift in Sources */,
 				FE87EA772BA60B2400710F3B /* ActiveScreensStateReducer.swift in Sources */,
 				FE87EA622BA6099900710F3B /* AppState.swift in Sources */,
+				FE87EA8C2BA60F7F00710F3B /* ProfileState.swift in Sources */,
 				FE87EA832BA60C8200710F3B /* HomeStateReducer.swift in Sources */,
 				FE87EA7F2BA60C6200710F3B /* HomeState.swift in Sources */,
 				FE87EA812BA60C7100710F3B /* HomeStateAction.swift in Sources */,
 				FE87EA6E2BA60A4400710F3B /* AppStateReducer.swift in Sources */,
 				FE87EA702BA60A5500710F3B /* Store.swift in Sources */,
 				FE87EA492BA5FFC500710F3B /* QuizletApp.swift in Sources */,
+				FE87EA8A2BA60F2000710F3B /* ProfileView.swift in Sources */,
 				FE87EA732BA60ADF00710F3B /* AnyCancellable.swift in Sources */,
 				FE87EA5E2BA6095A00710F3B /* SplashView.swift in Sources */,
 				FE87EA752BA60B1100710F3B /* ActiveScreensStateAction.swift in Sources */,
 				FE87EA852BA60D3E00710F3B /* AppState+ScreenStateSelector.swift in Sources */,
 				FE87EA7D2BA60B9600710F3B /* HomeView.swift in Sources */,
+				FE87EA902BA60F9400710F3B /* ProfileStateReducer.swift in Sources */,
 				FE87EA652BA609C200710F3B /* ActiveScreensState.swift in Sources */,
+				FE87EA8E2BA60F8900710F3B /* ProfileStateAction.swift in Sources */,
 				FE87EA682BA609DD00710F3B /* AppScreenState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
