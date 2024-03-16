@@ -12,7 +12,7 @@ struct SplashView: View {
         Text("Splash Screen")
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    store.dispatch(ActiveScreensStateAction.showScreen(.homeView))
+                    store.dispatch(ActiveScreensStateAction.showScreen(.mainView))
                     
                 }
             }
