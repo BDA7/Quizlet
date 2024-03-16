@@ -8,17 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		FE87EA492BA5FFC500710F3B /* QuizletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA482BA5FFC500710F3B /* QuizletApp.swift */; };
-		FE87EA4B2BA5FFC500710F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA4A2BA5FFC500710F3B /* ContentView.swift */; };
 		FE87EA4D2BA5FFC600710F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE87EA4C2BA5FFC600710F3B /* Assets.xcassets */; };
 		FE87EA502BA5FFC600710F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE87EA4F2BA5FFC600710F3B /* Preview Assets.xcassets */; };
+		FE87EA5E2BA6095A00710F3B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA5D2BA6095A00710F3B /* SplashView.swift */; };
+		FE87EA622BA6099900710F3B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA612BA6099900710F3B /* AppState.swift */; };
+		FE87EA652BA609C200710F3B /* ActiveScreensState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA642BA609C200710F3B /* ActiveScreensState.swift */; };
+		FE87EA682BA609DD00710F3B /* AppScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA672BA609DD00710F3B /* AppScreenState.swift */; };
+		FE87EA6C2BA60A2B00710F3B /* AppScreenStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA6B2BA60A2B00710F3B /* AppScreenStateReducer.swift */; };
+		FE87EA6E2BA60A4400710F3B /* AppStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA6D2BA60A4400710F3B /* AppStateReducer.swift */; };
+		FE87EA702BA60A5500710F3B /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA6F2BA60A5500710F3B /* Store.swift */; };
+		FE87EA732BA60ADF00710F3B /* AnyCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA722BA60ADF00710F3B /* AnyCancellable.swift */; };
+		FE87EA752BA60B1100710F3B /* ActiveScreensStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA742BA60B1100710F3B /* ActiveScreensStateAction.swift */; };
+		FE87EA772BA60B2400710F3B /* ActiveScreensStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA762BA60B2400710F3B /* ActiveScreensStateReducer.swift */; };
+		FE87EA7D2BA60B9600710F3B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA7C2BA60B9600710F3B /* HomeView.swift */; };
+		FE87EA7F2BA60C6200710F3B /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA7E2BA60C6200710F3B /* HomeState.swift */; };
+		FE87EA812BA60C7100710F3B /* HomeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA802BA60C7100710F3B /* HomeStateAction.swift */; };
+		FE87EA832BA60C8200710F3B /* HomeStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA822BA60C8200710F3B /* HomeStateReducer.swift */; };
+		FE87EA852BA60D3E00710F3B /* AppState+ScreenStateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EA842BA60D3E00710F3B /* AppState+ScreenStateSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE87EA452BA5FFC500710F3B /* Quizlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE87EA482BA5FFC500710F3B /* QuizletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizletApp.swift; sourceTree = "<group>"; };
-		FE87EA4A2BA5FFC500710F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE87EA4C2BA5FFC600710F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE87EA4F2BA5FFC600710F3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE87EA5D2BA6095A00710F3B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FE87EA612BA6099900710F3B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FE87EA642BA609C200710F3B /* ActiveScreensState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensState.swift; sourceTree = "<group>"; };
+		FE87EA672BA609DD00710F3B /* AppScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenState.swift; sourceTree = "<group>"; };
+		FE87EA6B2BA60A2B00710F3B /* AppScreenStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenStateReducer.swift; sourceTree = "<group>"; };
+		FE87EA6D2BA60A4400710F3B /* AppStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateReducer.swift; sourceTree = "<group>"; };
+		FE87EA6F2BA60A5500710F3B /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		FE87EA722BA60ADF00710F3B /* AnyCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCancellable.swift; sourceTree = "<group>"; };
+		FE87EA742BA60B1100710F3B /* ActiveScreensStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensStateAction.swift; sourceTree = "<group>"; };
+		FE87EA762BA60B2400710F3B /* ActiveScreensStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensStateReducer.swift; sourceTree = "<group>"; };
+		FE87EA7C2BA60B9600710F3B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE87EA7E2BA60C6200710F3B /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		FE87EA802BA60C7100710F3B /* HomeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateAction.swift; sourceTree = "<group>"; };
+		FE87EA822BA60C8200710F3B /* HomeStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateReducer.swift; sourceTree = "<group>"; };
+		FE87EA842BA60D3E00710F3B /* AppState+ScreenStateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+ScreenStateSelector.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +79,11 @@
 		FE87EA472BA5FFC500710F3B /* Quizlet */ = {
 			isa = PBXGroup;
 			children = (
-				FE87EA482BA5FFC500710F3B /* QuizletApp.swift */,
-				FE87EA4A2BA5FFC500710F3B /* ContentView.swift */,
+				FE87EA782BA60B7800710F3B /* Middlewares */,
+				FE87EA712BA60AD400710F3B /* Extensions */,
+				FE87EA5F2BA6098400710F3B /* GlobalStates */,
+				FE87EA572BA601FE00710F3B /* UI */,
+				FE87EA562BA601EF00710F3B /* App */,
 				FE87EA4C2BA5FFC600710F3B /* Assets.xcassets */,
 				FE87EA4E2BA5FFC600710F3B /* Preview Content */,
 			);
@@ -65,6 +96,145 @@
 				FE87EA4F2BA5FFC600710F3B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE87EA562BA601EF00710F3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA482BA5FFC500710F3B /* QuizletApp.swift */,
+				FE87EA6F2BA60A5500710F3B /* Store.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FE87EA572BA601FE00710F3B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA592BA6020A00710F3B /* Module */,
+				FE87EA582BA6020600710F3B /* Common */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FE87EA582BA6020600710F3B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FE87EA592BA6020A00710F3B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA792BA60B8300710F3B /* Home */,
+				FE87EA5A2BA6023100710F3B /* Splash */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		FE87EA5A2BA6023100710F3B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA5C2BA6094F00710F3B /* View */,
+				FE87EA5B2BA6094A00710F3B /* State */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		FE87EA5B2BA6094A00710F3B /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FE87EA5C2BA6094F00710F3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA5D2BA6095A00710F3B /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE87EA5F2BA6098400710F3B /* GlobalStates */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA662BA609CF00710F3B /* AppScreenState */,
+				FE87EA632BA609A300710F3B /* ActiveScreensState */,
+				FE87EA602BA6098E00710F3B /* AppState */,
+			);
+			path = GlobalStates;
+			sourceTree = "<group>";
+		};
+		FE87EA602BA6098E00710F3B /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA612BA6099900710F3B /* AppState.swift */,
+				FE87EA6D2BA60A4400710F3B /* AppStateReducer.swift */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		FE87EA632BA609A300710F3B /* ActiveScreensState */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA642BA609C200710F3B /* ActiveScreensState.swift */,
+				FE87EA742BA60B1100710F3B /* ActiveScreensStateAction.swift */,
+				FE87EA762BA60B2400710F3B /* ActiveScreensStateReducer.swift */,
+			);
+			path = ActiveScreensState;
+			sourceTree = "<group>";
+		};
+		FE87EA662BA609CF00710F3B /* AppScreenState */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA672BA609DD00710F3B /* AppScreenState.swift */,
+				FE87EA6B2BA60A2B00710F3B /* AppScreenStateReducer.swift */,
+			);
+			path = AppScreenState;
+			sourceTree = "<group>";
+		};
+		FE87EA712BA60AD400710F3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA722BA60ADF00710F3B /* AnyCancellable.swift */,
+				FE87EA842BA60D3E00710F3B /* AppState+ScreenStateSelector.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE87EA782BA60B7800710F3B /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
+		FE87EA792BA60B8300710F3B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA7B2BA60B8F00710F3B /* View */,
+				FE87EA7A2BA60B8C00710F3B /* State */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE87EA7A2BA60B8C00710F3B /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA7E2BA60C6200710F3B /* HomeState.swift */,
+				FE87EA802BA60C7100710F3B /* HomeStateAction.swift */,
+				FE87EA822BA60C8200710F3B /* HomeStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FE87EA7B2BA60B8F00710F3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE87EA7C2BA60B9600710F3B /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +307,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE87EA4B2BA5FFC500710F3B /* ContentView.swift in Sources */,
+				FE87EA6C2BA60A2B00710F3B /* AppScreenStateReducer.swift in Sources */,
+				FE87EA772BA60B2400710F3B /* ActiveScreensStateReducer.swift in Sources */,
+				FE87EA622BA6099900710F3B /* AppState.swift in Sources */,
+				FE87EA832BA60C8200710F3B /* HomeStateReducer.swift in Sources */,
+				FE87EA7F2BA60C6200710F3B /* HomeState.swift in Sources */,
+				FE87EA812BA60C7100710F3B /* HomeStateAction.swift in Sources */,
+				FE87EA6E2BA60A4400710F3B /* AppStateReducer.swift in Sources */,
+				FE87EA702BA60A5500710F3B /* Store.swift in Sources */,
 				FE87EA492BA5FFC500710F3B /* QuizletApp.swift in Sources */,
+				FE87EA732BA60ADF00710F3B /* AnyCancellable.swift in Sources */,
+				FE87EA5E2BA6095A00710F3B /* SplashView.swift in Sources */,
+				FE87EA752BA60B1100710F3B /* ActiveScreensStateAction.swift in Sources */,
+				FE87EA852BA60D3E00710F3B /* AppState+ScreenStateSelector.swift in Sources */,
+				FE87EA7D2BA60B9600710F3B /* HomeView.swift in Sources */,
+				FE87EA652BA609C200710F3B /* ActiveScreensState.swift in Sources */,
+				FE87EA682BA609DD00710F3B /* AppScreenState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +459,7 @@
 				DEVELOPMENT_TEAM = U49D7QC954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,9 +472,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danyxw.Quizlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,6 +492,7 @@
 				DEVELOPMENT_TEAM = U49D7QC954;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,9 +505,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danyxw.Quizlet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
