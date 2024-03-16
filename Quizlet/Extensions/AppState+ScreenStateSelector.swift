@@ -9,13 +9,19 @@ import Foundation
 
 extension AppState {
     func screenState<State>(for screen: AppScreen) -> State? {
-        return activeScreens.screens
+        let screen = activeScreens.screens
             .compactMap {
                 switch ($0, screen) {
-                case (.homeView(let state), .homeView): return state as? State
+                case (.homeView(let state), .homeView):
+                    return state as? State
+                case (.mainView(let state), .mainView):
+                    return state as? State
+                case (.profileView(let state), .profile): return state as? State
+
                 default: return nil
                 }
             }
             .first
+        return screen
     }
 }

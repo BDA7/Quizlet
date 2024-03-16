@@ -8,5 +8,11 @@
 import Foundation
 
 struct MainState {
-    
+    let themes: [ThemesDTO]
+}
+
+extension MainState {
+    init() {
+        themes = []
+    }
 }

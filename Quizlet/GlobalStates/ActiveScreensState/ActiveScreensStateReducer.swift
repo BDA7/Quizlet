@@ -17,6 +17,8 @@ extension ActiveScreensState {
             case .showScreen(.splashScreen), .dismissScreen(.splashScreen): screens = [.splashScreen]
             case .dismissScreen(let screen): screens = screens.filter { $0 != screen }
             case .showScreen(.homeView): screens = [.homeView(HomeState())]
+            case .showScreen(.mainView): screens = [.mainView(MainState())]
+            case .showScreen(.profile): screens = [.profileView(ProfileState())]
             }
         }
 

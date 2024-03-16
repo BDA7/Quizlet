@@ -10,6 +10,8 @@ import Foundation
 enum AppScreenState {
     case splashScreen
     case homeView(HomeState)
+    case profileView(ProfileState)
+    case mainView(MainState)
 }
 
 extension AppScreenState: CustomStringConvertible {
@@ -17,6 +19,8 @@ extension AppScreenState: CustomStringConvertible {
         switch self {
         case .splashScreen: return "splashScreen"
         case .homeView: return "homeView"
+        case .mainView: return "mainView"
+        case .profileView: return "profileView"
         }
 
     }
@@ -27,7 +31,9 @@ extension AppScreenState {
         switch (lhs, rhs) {
         case (.splashScreen, .splashScreen): return true
         case (.homeView, .homeView): return true
-        case (.homeView, _), (.splashScreen, _): return false
+        case (.profileView, .profile): return true
+        case (.mainView, .mainView): return true
+        case (.splashScreen, _), (.mainView, _), (.profileView, _), (.homeView, _): return false
         }
     }
 

@@ -8,5 +8,6 @@
 import Foundation
 
 enum MainStateAction: Action {
-    
+    case fetchQuestionThemes
+    case didReceiveQuestionThemes(themes: [ThemesDTO])
 }

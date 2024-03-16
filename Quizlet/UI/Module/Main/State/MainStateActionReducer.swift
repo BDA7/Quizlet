@@ -10,6 +10,10 @@ import Foundation
 extension MainState {
     static let reducer: Reducer<Self> = {state, action in
         switch action {
+        case MainStateAction.fetchQuestionThemes:
+            return MainState()
+        case MainStateAction.didReceiveQuestionThemes(let themes):
+            return MainState(themes: themes)
         default: return state
         }
     }

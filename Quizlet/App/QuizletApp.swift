@@ -10,14 +10,15 @@ import SwiftUI
 let store = Store(
     initial: AppState(),
     reducer: AppState.reducer,
-    middlewares: []
+    middlewares: [Middlewares.questions, Middlewares.logger]
 )
 
 struct AppView: View {
     @EnvironmentObject var store: Store<AppState>
 
     var body: some View {
-        if store.state.screenState(for: .homeView) as HomeState? != nil {
+        if store.state.screenState(for: .homeView) as HomeState? != nil ||
+            store.state.screenState(for: .mainView) as MainState? != nil {
             NavigationView {
                 HomeView()
             }
