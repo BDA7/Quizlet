@@ -13,6 +13,6 @@ struct ActiveScreensState {
 
 extension ActiveScreensState {
     init() {
-        screens = [.mainView(MainState())]
+        screens = [.splashScreen]
     }
 }
