@@ -9,7 +9,6 @@ import Foundation
 
 enum AppScreen {
     case splashScreen
-    case homeView
     case mainView
     case profile
 }

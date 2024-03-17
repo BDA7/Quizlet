@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var store: Store<AppState>
-    var state: HomeState? { store.state.screenState(for: .homeView) }
     @State private var selection = 1
     
     var body: some View {

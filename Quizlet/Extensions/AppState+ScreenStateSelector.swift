@@ -12,8 +12,6 @@ extension AppState {
         let screen = activeScreens.screens
             .compactMap {
                 switch ($0, screen) {
-                case (.homeView(let state), .homeView):
-                    return state as? State
                 case (.mainView(let state), .mainView):
                     return state as? State
                 case (.profileView(let state), .profile): return state as? State

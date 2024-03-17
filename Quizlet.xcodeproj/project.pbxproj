@@ -37,9 +37,6 @@
 		FE87EAAC2BA6156C00710F3B /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE87EAAB2BA6156C00710F3B /* AppErrors.swift */; };
 		FE9318592BA630470075E309 /* QuestionsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9318582BA630470075E309 /* QuestionsMiddleware.swift */; };
 		FE93185B2BA648760075E309 /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93185A2BA648760075E309 /* LoggerMiddleware.swift */; };
-		FE93185D2BA649ED0075E309 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93185C2BA649ED0075E309 /* HomeState.swift */; };
-		FE93185F2BA649F50075E309 /* HomeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93185E2BA649F50075E309 /* HomeStateAction.swift */; };
-		FE9318612BA64A000075E309 /* HomeStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9318602BA64A000075E309 /* HomeStateReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,9 +71,6 @@
 		FE87EAAB2BA6156C00710F3B /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		FE9318582BA630470075E309 /* QuestionsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsMiddleware.swift; sourceTree = "<group>"; };
 		FE93185A2BA648760075E309 /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
-		FE93185C2BA649ED0075E309 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
-		FE93185E2BA649F50075E309 /* HomeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateAction.swift; sourceTree = "<group>"; };
-		FE9318602BA64A000075E309 /* HomeStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStateReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,9 +253,6 @@
 		FE87EA7A2BA60B8C00710F3B /* State */ = {
 			isa = PBXGroup;
 			children = (
-				FE93185C2BA649ED0075E309 /* HomeState.swift */,
-				FE93185E2BA649F50075E309 /* HomeStateAction.swift */,
-				FE9318602BA64A000075E309 /* HomeStateReducer.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -425,10 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE93185D2BA649ED0075E309 /* HomeState.swift in Sources */,
 				FE87EAA52BA612FB00710F3B /* QuestionsRepository.swift in Sources */,
 				FE87EA982BA6107700710F3B /* MainState.swift in Sources */,
-				FE9318612BA64A000075E309 /* HomeStateReducer.swift in Sources */,
 				FE9318592BA630470075E309 /* QuestionsMiddleware.swift in Sources */,
 				FE93185B2BA648760075E309 /* LoggerMiddleware.swift in Sources */,
 				FE87EA6C2BA60A2B00710F3B /* AppScreenStateReducer.swift in Sources */,
@@ -444,7 +433,6 @@
 				FE87EA8A2BA60F2000710F3B /* ProfileView.swift in Sources */,
 				FE87EA732BA60ADF00710F3B /* AnyCancellable.swift in Sources */,
 				FE87EA5E2BA6095A00710F3B /* SplashView.swift in Sources */,
-				FE93185F2BA649F50075E309 /* HomeStateAction.swift in Sources */,
 				FE87EAA82BA6134A00710F3B /* MockManager.swift in Sources */,
 				FE87EAAA2BA614B500710F3B /* ThemesDTO.swift in Sources */,
 				FE87EA752BA60B1100710F3B /* ActiveScreensStateAction.swift in Sources */,
