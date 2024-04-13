@@ -16,17 +16,32 @@ let store = Store(
 
 struct FlowView: View {
     @EnvironmentObject var store: Store<AppState>
+    @StateObject private var navigation = NavigationModule.shared
     var body: some View {
         if store.publicState.screenState(for: .home) as HomeViewState? != nil {
             HomeView()
                 .environmentObject(store)
         } else if store.publicState.screenState(for: .auth) as AuthViewState? != nil {
-            AuthView()
-                .environmentObject(store)
+            authFlow
         } else {
             SplashView()
                 .environmentObject(store)
         }
+    }
+    
+    private var authFlow: some View {
+        NavigationStack(path: $navigation.screens) {
+            AuthView()
+                .environmentObject(store)
+                .navigationDestination(for: NavigationModule.NavigationCases.self) { val in
+                    switch val {
+                    case .register:
+                        RegisterView()
+                            .environmentObject(store)
+                    }
+                }
+        }
+        .navigationViewStyle(.stack)
     }
     
 }

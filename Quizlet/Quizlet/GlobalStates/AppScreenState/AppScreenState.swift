@@ -11,6 +11,7 @@ enum AppScreenState {
     case auth(AuthViewState)
     case splash(SplashViewState)
     case home(HomeViewState)
+    case register(RegisterViewState)
 }
 
 extension AppScreenState: CustomStringConvertible {
@@ -22,6 +23,8 @@ extension AppScreenState: CustomStringConvertible {
             return "Splash View"
         case .home:
             return "Home View"
+        case .register:
+            return "Register View"
         }
     }
 }
@@ -29,9 +32,9 @@ extension AppScreenState: CustomStringConvertible {
 extension AppScreenState {
     static func == (lhs: AppScreenState, rhs: AppScreen) -> Bool {
         switch (lhs, rhs) {
-        case (.splash, .splash), (.auth, .auth), (.home, .home):
+        case (.splash, .splash), (.auth, .auth), (.home, .home), (.register, .register):
             return true
-        case (.splash, _), (.auth, _), (.home, _):
+        case (.splash, _), (.auth, _), (.home, _), (.register, _):
             return false
         }
     }

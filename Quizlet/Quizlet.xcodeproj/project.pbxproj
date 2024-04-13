@@ -38,6 +38,10 @@
 		FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAB2BCB474000DF65DF /* HomeViewStateAction.swift */; };
 		FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAD2BCB475300DF65DF /* HomeViewStateReducer.swift */; };
 		FECFEEB02BCB49C100DF65DF /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */; };
+		FECFEEB62BCB4A5D00DF65DF /* RegisterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEB52BCB4A5D00DF65DF /* RegisterViewState.swift */; };
+		FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEB72BCB4A6D00DF65DF /* RegisterViewStateAction.swift */; };
+		FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEB92BCB4A8000DF65DF /* RegisterViewStateReducer.swift */; };
+		FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEBB2BCB4AA800DF65DF /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		FECFEEAB2BCB474000DF65DF /* HomeViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStateAction.swift; sourceTree = "<group>"; };
 		FECFEEAD2BCB475300DF65DF /* HomeViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStateReducer.swift; sourceTree = "<group>"; };
 		FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
+		FECFEEB52BCB4A5D00DF65DF /* RegisterViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewState.swift; sourceTree = "<group>"; };
+		FECFEEB72BCB4A6D00DF65DF /* RegisterViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewStateAction.swift; sourceTree = "<group>"; };
+		FECFEEB92BCB4A8000DF65DF /* RegisterViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewStateReducer.swift; sourceTree = "<group>"; };
+		FECFEEBB2BCB4AA800DF65DF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,7 @@
 		FEBE10D52BCA9CF000C75D9C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FECFEEB22BCB4A4600DF65DF /* RegisterView */,
 				FECFEEA42BCB470A00DF65DF /* HomeView */,
 				FECFEE722BCB3DD000DF65DF /* SplashView */,
 				FEBE10D62BCA9CF700C75D9C /* AuthView */,
@@ -287,6 +296,33 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		FECFEEB22BCB4A4600DF65DF /* RegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEB42BCB4A5100DF65DF /* State */,
+				FECFEEB32BCB4A4E00DF65DF /* View */,
+			);
+			path = RegisterView;
+			sourceTree = "<group>";
+		};
+		FECFEEB32BCB4A4E00DF65DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEBB2BCB4AA800DF65DF /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FECFEEB42BCB4A5100DF65DF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEB52BCB4A5D00DF65DF /* RegisterViewState.swift */,
+				FECFEEB72BCB4A6D00DF65DF /* RegisterViewStateAction.swift */,
+				FECFEEB92BCB4A8000DF65DF /* RegisterViewStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -369,6 +405,7 @@
 				FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */,
 				FECFEEB02BCB49C100DF65DF /* LoggerMiddleware.swift in Sources */,
 				FECFEE992BCB41B600DF65DF /* AppState.swift in Sources */,
+				FECFEEB62BCB4A5D00DF65DF /* RegisterViewState.swift in Sources */,
 				FECFEEA82BCB472100DF65DF /* HomeView.swift in Sources */,
 				FECFEE8E2BCB409100DF65DF /* SplashViewState.swift in Sources */,
 				FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */,
@@ -382,10 +419,13 @@
 				FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */,
 				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
 				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
+				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
+				FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */,
 				FECFEE7E2BCB3EA000DF65DF /* AuthViewStateAction.swift in Sources */,
 				FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */,
+				FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */,
 				FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */,
 				FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */,
 			);

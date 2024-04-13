@@ -15,10 +15,12 @@ extension ActiveScreensState {
         if let action = action as? ActiveScreensStateAction {
             
             switch action {
-            case .showScreen(.auth):
+            case .showScreen(.auth), .dismissScreen(.register):
                 screens = [.auth(AuthViewState())]
             case .showScreen(.home):
                 screens = [.home(HomeViewState())]
+            case .showScreen(.register):
+                screens += [.register(RegisterViewState())]
             case .dismissScreen(.auth), .showScreen(.splash), .dismissScreen(.splash), .dismissScreen(.home):
                 screens = [.splash(SplashViewState())]
             }

@@ -12,6 +12,7 @@ enum AppScreen: Hashable {
     case auth
     case splash
     case home
+    case register
 }
 
 enum ActiveScreensStateAction: Action {

@@ -27,6 +27,9 @@ struct AuthView: View {
                 formView
             }
         }
+        .onAppear {
+            store.dispatch(ActiveScreensStateAction.showScreen(.auth))
+        }
     }
     
     private var titleView: some View {
@@ -44,6 +47,7 @@ struct AuthView: View {
         VStack(alignment: .center, spacing: 16) {
             textFieldsByFormView
             BaseButton(title: "Войти") {}
+            registerLink
         }
     }
     
@@ -53,8 +57,21 @@ struct AuthView: View {
             BaseSecureTextField("Password", text: $password)
         }
     }
+    
+    private var registerLink: some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                NavigationModule.shared.navigateTo(.register)
+            }, label: {
+                Text("Зарегестрироваться")
+            })
+            Spacer()
+        }
+    }
 }
 
 #Preview {
     AuthView()
+        .environmentObject(store)
 }

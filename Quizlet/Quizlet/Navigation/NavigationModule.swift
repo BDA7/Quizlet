@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class NavigationModule: ObservableObject {
-    @Published var screen: [NavigationCases] = []
+    @Published var screens: [NavigationCases] = []
     
     static public let shared = NavigationModule()
 
@@ -17,16 +17,17 @@ final class NavigationModule: ObservableObject {
     
     public func navigateTo(_ screen: NavigationCases) {
         switch screen {
-            
-        default:
-            break
+        case .register:
+            self.screens.append(.register)
         }
+        
+        print(screens)
     }
 
 }
 
 extension NavigationModule {
-    struct NavigationCases {
-        
+    enum NavigationCases {
+        case register
     }
 }
