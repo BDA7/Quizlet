@@ -23,6 +23,14 @@ public struct BaseTextField: View {
             prompt: Text(placeholder)
                 .foregroundStyle(.gray)
         )
+        .foregroundStyle(.black)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16.0)
+                .fill(.white)
+        )
+        .shadow(radius: 1)
+        .frame(height: 64)
     }
 }
 

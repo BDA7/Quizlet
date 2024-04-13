@@ -8,12 +8,36 @@
 import SwiftUI
 
 public struct BaseButton: View {
-    public init() {}
+    let action: () -> Void
+    let title: String
+    
+    public init(title: String, _ action: @escaping () -> Void) {
+        self.title = title
+        self.action = action
+    }
     public var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(
+            action: {action()},
+            label: {
+                HStack(alignment: .center) {
+                    Spacer()
+                    Text(title)
+                        .foregroundStyle(.white)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+            }
+        )
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 16.0)
+                .fill(.orange)
+        )
+        .frame(height: 64)
     }
 }
 
 #Preview {
-    BaseButton()
+    BaseButton(title: "что-то", {})
 }
