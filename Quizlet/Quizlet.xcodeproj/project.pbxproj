@@ -19,6 +19,7 @@
 		FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEBE10B32BCA8EC300C75D9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FEBE10CF2BCA93B300C75D9C /* QuizletNetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QuizletNetworkLayer; path = ../QuizletNetworkLayer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		FEBE10A02BCA8EC200C75D9C = {
 			isa = PBXGroup;
 			children = (
+				FEBE10CF2BCA93B300C75D9C /* QuizletNetworkLayer */,
 				FEBE10AB2BCA8EC200C75D9C /* Quizlet */,
 				FEBE10AA2BCA8EC200C75D9C /* Products */,
 			);
