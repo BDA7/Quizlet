@@ -7,8 +7,13 @@
 
 import SwiftUI
 import QuizletCommonUI
+import QuizletRedux
 
 struct AuthView: View {
+    @EnvironmentObject var store: Store<AppState>
+    
+    var state: AuthViewState? { store.publicState.screenState(for: .auth) }
+
     @State private var userName: String = ""
     @State private var password: String = ""
     

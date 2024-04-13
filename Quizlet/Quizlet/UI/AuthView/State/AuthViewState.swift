@@ -1,12 +1,12 @@
 //
-//  NetworkError.swift
-//
+//  AuthViewState.swift
+//  Quizlet
 //
 //  Created by Данила Бондаренко on 14.04.2024.
 //
 
 import Foundation
 
-public enum NetworkError: Error {
-    case authLoose
+struct AuthViewState {
+    
 }

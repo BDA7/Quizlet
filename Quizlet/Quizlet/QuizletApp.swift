@@ -6,12 +6,37 @@
 //
 
 import SwiftUI
+import QuizletRedux
+
+let store = Store(
+    initial: AppState(),
+    reducer: AppState.reducer,
+    middlewares: [Middlewares.authorization, Middlewares.logger]
+)
+
+struct FlowView: View {
+    @EnvironmentObject var store: Store<AppState>
+    var body: some View {
+        if store.publicState.screenState(for: .home) as HomeViewState? != nil {
+            HomeView()
+                .environmentObject(store)
+        } else if store.publicState.screenState(for: .auth) as AuthViewState? != nil {
+            AuthView()
+                .environmentObject(store)
+        } else {
+            SplashView()
+                .environmentObject(store)
+        }
+    }
+    
+}
 
 @main
 struct QuizletApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FlowView()
+                .environmentObject(store)
         }
     }
 }

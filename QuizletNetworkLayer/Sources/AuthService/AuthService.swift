@@ -6,16 +6,21 @@
 //
 
 import Foundation
+import Combine
 
-final class AuthService {
+public final class AuthService: ObservableObject {
     private let userDefaults = UserDefaults.standard
     
-    public func chechAuth(_ userName: String, _ password: String) -> AuthModel? {
+    public init() {}
+    
+    public func chechAuth() -> AnyPublisher<AuthModel, NetworkError> {
         if let userModel = userDefaults.object(forKey: "userModel") as? AuthModel {
-            return userModel
+            return Just(userModel)
+                .setFailureType(to: NetworkError.self)
+                .eraseToAnyPublisher()
         }
         
-        return nil
+        return Fail(error: NetworkError.authLoose).eraseToAnyPublisher()
     }
     
     public func register(_ userName: String, _ password: String) {

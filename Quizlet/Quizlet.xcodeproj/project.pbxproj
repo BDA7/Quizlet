@@ -15,7 +15,29 @@
 		FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */; };
 		FEBE10D82BCA9D0100C75D9C /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10D72BCA9D0100C75D9C /* AuthView.swift */; };
 		FEBE10DB2BCA9E2500C75D9C /* QuizletCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEBE10DA2BCA9E2500C75D9C /* QuizletCommonUI */; };
-		FECFEE6F2BCB359F00DF65DF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */; };
+		FECFEE782BCB3E6900DF65DF /* QuizletRedux in Frameworks */ = {isa = PBXBuildFile; productRef = FECFEE772BCB3E6900DF65DF /* QuizletRedux */; };
+		FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE7B2BCB3E9000DF65DF /* AuthViewState.swift */; };
+		FECFEE7E2BCB3EA000DF65DF /* AuthViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE7D2BCB3EA000DF65DF /* AuthViewStateAction.swift */; };
+		FECFEE812BCB3F5A00DF65DF /* AppScreenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE802BCB3F5A00DF65DF /* AppScreenState.swift */; };
+		FECFEE832BCB3FC000DF65DF /* AppScreenStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE822BCB3FC000DF65DF /* AppScreenStateReducer.swift */; };
+		FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE842BCB3FF000DF65DF /* AuthViewStateReducer.swift */; };
+		FECFEE882BCB406900DF65DF /* ActiveScreensState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE872BCB406900DF65DF /* ActiveScreensState.swift */; };
+		FECFEE8A2BCB407A00DF65DF /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE892BCB407A00DF65DF /* SplashView.swift */; };
+		FECFEE8E2BCB409100DF65DF /* SplashViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE8D2BCB409100DF65DF /* SplashViewState.swift */; };
+		FECFEE902BCB409B00DF65DF /* SplashViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE8F2BCB409B00DF65DF /* SplashViewStateAction.swift */; };
+		FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE912BCB40AF00DF65DF /* SplashViewStateReducer.swift */; };
+		FECFEE942BCB412300DF65DF /* ActiveScreensStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE932BCB412300DF65DF /* ActiveScreensStateAction.swift */; };
+		FECFEE962BCB414200DF65DF /* ActiveScreensStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE952BCB414200DF65DF /* ActiveScreensStateReducer.swift */; };
+		FECFEE992BCB41B600DF65DF /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE982BCB41B600DF65DF /* AppState.swift */; };
+		FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE9A2BCB41C400DF65DF /* AppStateReducer.swift */; };
+		FECFEE9D2BCB431800DF65DF /* AppState+ScreenStateSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE9C2BCB431800DF65DF /* AppState+ScreenStateSelector.swift */; };
+		FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE9F2BCB451300DF65DF /* NavigationModule.swift */; };
+		FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEA22BCB45CA00DF65DF /* AuthorizationMiddleware.swift */; };
+		FECFEEA82BCB472100DF65DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEA72BCB472100DF65DF /* HomeView.swift */; };
+		FECFEEAA2BCB472F00DF65DF /* HomeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEA92BCB472F00DF65DF /* HomeViewState.swift */; };
+		FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAB2BCB474000DF65DF /* HomeViewStateAction.swift */; };
+		FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAD2BCB475300DF65DF /* HomeViewStateReducer.swift */; };
+		FECFEEB02BCB49C100DF65DF /* LoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +50,29 @@
 		FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		FEBE10D72BCA9D0100C75D9C /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		FEBE10D92BCA9D8D00C75D9C /* QuizletCommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QuizletCommonUI; path = ../QuizletCommonUI; sourceTree = "<group>"; };
-		FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		FECFEE712BCB3A4200DF65DF /* QuizletRedux */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QuizletRedux; path = ../QuizletRedux; sourceTree = "<group>"; };
+		FECFEE7B2BCB3E9000DF65DF /* AuthViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewState.swift; sourceTree = "<group>"; };
+		FECFEE7D2BCB3EA000DF65DF /* AuthViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewStateAction.swift; sourceTree = "<group>"; };
+		FECFEE802BCB3F5A00DF65DF /* AppScreenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenState.swift; sourceTree = "<group>"; };
+		FECFEE822BCB3FC000DF65DF /* AppScreenStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenStateReducer.swift; sourceTree = "<group>"; };
+		FECFEE842BCB3FF000DF65DF /* AuthViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewStateReducer.swift; sourceTree = "<group>"; };
+		FECFEE872BCB406900DF65DF /* ActiveScreensState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensState.swift; sourceTree = "<group>"; };
+		FECFEE892BCB407A00DF65DF /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FECFEE8D2BCB409100DF65DF /* SplashViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewState.swift; sourceTree = "<group>"; };
+		FECFEE8F2BCB409B00DF65DF /* SplashViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewStateAction.swift; sourceTree = "<group>"; };
+		FECFEE912BCB40AF00DF65DF /* SplashViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewStateReducer.swift; sourceTree = "<group>"; };
+		FECFEE932BCB412300DF65DF /* ActiveScreensStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensStateAction.swift; sourceTree = "<group>"; };
+		FECFEE952BCB414200DF65DF /* ActiveScreensStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveScreensStateReducer.swift; sourceTree = "<group>"; };
+		FECFEE982BCB41B600DF65DF /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		FECFEE9A2BCB41C400DF65DF /* AppStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateReducer.swift; sourceTree = "<group>"; };
+		FECFEE9C2BCB431800DF65DF /* AppState+ScreenStateSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState+ScreenStateSelector.swift"; sourceTree = "<group>"; };
+		FECFEE9F2BCB451300DF65DF /* NavigationModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModule.swift; sourceTree = "<group>"; };
+		FECFEEA22BCB45CA00DF65DF /* AuthorizationMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationMiddleware.swift; sourceTree = "<group>"; };
+		FECFEEA72BCB472100DF65DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FECFEEA92BCB472F00DF65DF /* HomeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewState.swift; sourceTree = "<group>"; };
+		FECFEEAB2BCB474000DF65DF /* HomeViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStateAction.swift; sourceTree = "<group>"; };
+		FECFEEAD2BCB475300DF65DF /* HomeViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStateReducer.swift; sourceTree = "<group>"; };
+		FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +82,7 @@
 			files = (
 				FEBE10DB2BCA9E2500C75D9C /* QuizletCommonUI in Frameworks */,
 				FEBE10D22BCA940600C75D9C /* QuizletNetworkLayer in Frameworks */,
+				FECFEE782BCB3E6900DF65DF /* QuizletRedux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +92,7 @@
 		FEBE10A02BCA8EC200C75D9C = {
 			isa = PBXGroup;
 			children = (
+				FECFEE712BCB3A4200DF65DF /* QuizletRedux */,
 				FEBE10D92BCA9D8D00C75D9C /* QuizletCommonUI */,
 				FEBE10CF2BCA93B300C75D9C /* QuizletNetworkLayer */,
 				FEBE10AB2BCA8EC200C75D9C /* Quizlet */,
@@ -66,6 +112,9 @@
 		FEBE10AB2BCA8EC200C75D9C /* Quizlet */ = {
 			isa = PBXGroup;
 			children = (
+				FECFEEA12BCB45B900DF65DF /* Middlewares */,
+				FECFEE9E2BCB44FE00DF65DF /* Navigation */,
+				FECFEE732BCB3E0800DF65DF /* GlobalStates */,
 				FEBE10D52BCA9CF000C75D9C /* UI */,
 				FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */,
 				FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */,
@@ -94,6 +143,8 @@
 		FEBE10D52BCA9CF000C75D9C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FECFEEA42BCB470A00DF65DF /* HomeView */,
+				FECFEE722BCB3DD000DF65DF /* SplashView */,
 				FEBE10D62BCA9CF700C75D9C /* AuthView */,
 			);
 			path = UI;
@@ -102,10 +153,138 @@
 		FEBE10D62BCA9CF700C75D9C /* AuthView */ = {
 			isa = PBXGroup;
 			children = (
-				FEBE10D72BCA9D0100C75D9C /* AuthView.swift */,
-				FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */,
+				FECFEE7A2BCB3E8200DF65DF /* State */,
+				FECFEE792BCB3E7E00DF65DF /* View */,
 			);
 			path = AuthView;
+			sourceTree = "<group>";
+		};
+		FECFEE722BCB3DD000DF65DF /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE8C2BCB408200DF65DF /* State */,
+				FECFEE8B2BCB407F00DF65DF /* View */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		FECFEE732BCB3E0800DF65DF /* GlobalStates */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE972BCB41AE00DF65DF /* AppState */,
+				FECFEE862BCB406000DF65DF /* ActiveScreensState */,
+				FECFEE7F2BCB3F5100DF65DF /* AppScreenState */,
+			);
+			path = GlobalStates;
+			sourceTree = "<group>";
+		};
+		FECFEE792BCB3E7E00DF65DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FEBE10D72BCA9D0100C75D9C /* AuthView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FECFEE7A2BCB3E8200DF65DF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE7B2BCB3E9000DF65DF /* AuthViewState.swift */,
+				FECFEE7D2BCB3EA000DF65DF /* AuthViewStateAction.swift */,
+				FECFEE842BCB3FF000DF65DF /* AuthViewStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FECFEE7F2BCB3F5100DF65DF /* AppScreenState */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE802BCB3F5A00DF65DF /* AppScreenState.swift */,
+				FECFEE822BCB3FC000DF65DF /* AppScreenStateReducer.swift */,
+			);
+			path = AppScreenState;
+			sourceTree = "<group>";
+		};
+		FECFEE862BCB406000DF65DF /* ActiveScreensState */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE872BCB406900DF65DF /* ActiveScreensState.swift */,
+				FECFEE932BCB412300DF65DF /* ActiveScreensStateAction.swift */,
+				FECFEE952BCB414200DF65DF /* ActiveScreensStateReducer.swift */,
+			);
+			path = ActiveScreensState;
+			sourceTree = "<group>";
+		};
+		FECFEE8B2BCB407F00DF65DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE892BCB407A00DF65DF /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FECFEE8C2BCB408200DF65DF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE8D2BCB409100DF65DF /* SplashViewState.swift */,
+				FECFEE8F2BCB409B00DF65DF /* SplashViewStateAction.swift */,
+				FECFEE912BCB40AF00DF65DF /* SplashViewStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		FECFEE972BCB41AE00DF65DF /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE982BCB41B600DF65DF /* AppState.swift */,
+				FECFEE9A2BCB41C400DF65DF /* AppStateReducer.swift */,
+				FECFEE9C2BCB431800DF65DF /* AppState+ScreenStateSelector.swift */,
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		FECFEE9E2BCB44FE00DF65DF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEE9F2BCB451300DF65DF /* NavigationModule.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FECFEEA12BCB45B900DF65DF /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEA22BCB45CA00DF65DF /* AuthorizationMiddleware.swift */,
+				FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */,
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
+		FECFEEA42BCB470A00DF65DF /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEA62BCB471A00DF65DF /* State */,
+				FECFEEA52BCB471600DF65DF /* View */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FECFEEA52BCB471600DF65DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEA72BCB472100DF65DF /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FECFEEA62BCB471A00DF65DF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FECFEEA92BCB472F00DF65DF /* HomeViewState.swift */,
+				FECFEEAB2BCB474000DF65DF /* HomeViewStateAction.swift */,
+				FECFEEAD2BCB475300DF65DF /* HomeViewStateReducer.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +306,7 @@
 			packageProductDependencies = (
 				FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */,
 				FEBE10DA2BCA9E2500C75D9C /* QuizletCommonUI */,
+				FECFEE772BCB3E6900DF65DF /* QuizletRedux */,
 			);
 			productName = Quizlet;
 			productReference = FEBE10A92BCA8EC200C75D9C /* Quizlet.app */;
@@ -182,11 +362,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FECFEE6F2BCB359F00DF65DF /* AuthViewModel.swift in Sources */,
+				FECFEE832BCB3FC000DF65DF /* AppScreenStateReducer.swift in Sources */,
+				FECFEE9D2BCB431800DF65DF /* AppState+ScreenStateSelector.swift in Sources */,
+				FECFEE902BCB409B00DF65DF /* SplashViewStateAction.swift in Sources */,
+				FECFEEAA2BCB472F00DF65DF /* HomeViewState.swift in Sources */,
 				FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */,
+				FECFEEB02BCB49C100DF65DF /* LoggerMiddleware.swift in Sources */,
+				FECFEE992BCB41B600DF65DF /* AppState.swift in Sources */,
+				FECFEEA82BCB472100DF65DF /* HomeView.swift in Sources */,
+				FECFEE8E2BCB409100DF65DF /* SplashViewState.swift in Sources */,
+				FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */,
+				FECFEE812BCB3F5A00DF65DF /* AppScreenState.swift in Sources */,
+				FECFEE882BCB406900DF65DF /* ActiveScreensState.swift in Sources */,
 				FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */,
+				FECFEE942BCB412300DF65DF /* ActiveScreensStateAction.swift in Sources */,
+				FECFEE8A2BCB407A00DF65DF /* SplashView.swift in Sources */,
 				FEBE10D82BCA9D0100C75D9C /* AuthView.swift in Sources */,
+				FECFEE962BCB414200DF65DF /* ActiveScreensStateReducer.swift in Sources */,
+				FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */,
 				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
+				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
+				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
+				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
+				FECFEE7E2BCB3EA000DF65DF /* AuthViewStateAction.swift in Sources */,
+				FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */,
+				FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */,
+				FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +612,10 @@
 		FEBE10DA2BCA9E2500C75D9C /* QuizletCommonUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = QuizletCommonUI;
+		};
+		FECFEE772BCB3E6900DF65DF /* QuizletRedux */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuizletRedux;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

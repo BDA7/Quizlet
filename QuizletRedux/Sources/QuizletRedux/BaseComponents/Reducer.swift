@@ -1,5 +1,5 @@
 //
-//  NetworkError.swift
+//  Reducer.swift
 //
 //
 //  Created by Данила Бондаренко on 14.04.2024.
@@ -7,6 +7,4 @@
 
 import Foundation
 
-public enum NetworkError: Error {
-    case authLoose
-}
+public typealias Reducer<State> = (State, Action) -> State
