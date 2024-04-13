@@ -15,6 +15,7 @@
 		FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */; };
 		FEBE10D82BCA9D0100C75D9C /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10D72BCA9D0100C75D9C /* AuthView.swift */; };
 		FEBE10DB2BCA9E2500C75D9C /* QuizletCommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FEBE10DA2BCA9E2500C75D9C /* QuizletCommonUI */; };
+		FECFEE6F2BCB359F00DF65DF /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		FEBE10D72BCA9D0100C75D9C /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		FEBE10D92BCA9D8D00C75D9C /* QuizletCommonUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QuizletCommonUI; path = ../QuizletCommonUI; sourceTree = "<group>"; };
+		FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				FEBE10D72BCA9D0100C75D9C /* AuthView.swift */,
+				FECFEE6E2BCB359F00DF65DF /* AuthViewModel.swift */,
 			);
 			path = AuthView;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECFEE6F2BCB359F00DF65DF /* AuthViewModel.swift in Sources */,
 				FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */,
 				FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */,
 				FEBE10D82BCA9D0100C75D9C /* AuthView.swift in Sources */,
