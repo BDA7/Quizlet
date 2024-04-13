@@ -11,6 +11,8 @@
 		FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */; };
 		FEBE10B12BCA8EC300C75D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */; };
 		FEBE10B42BCA8EC300C75D9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B32BCA8EC300C75D9C /* Preview Assets.xcassets */; };
+		FEBE10D22BCA940600C75D9C /* QuizletNetworkLayer in Frameworks */ = {isa = PBXBuildFile; productRef = FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */; };
+		FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEBE10B32BCA8EC300C75D9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEBE10CF2BCA93B300C75D9C /* QuizletNetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = QuizletNetworkLayer; path = ../QuizletNetworkLayer; sourceTree = "<group>"; };
+		FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEBE10D22BCA940600C75D9C /* QuizletNetworkLayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +43,7 @@
 				FEBE10CF2BCA93B300C75D9C /* QuizletNetworkLayer */,
 				FEBE10AB2BCA8EC200C75D9C /* Quizlet */,
 				FEBE10AA2BCA8EC200C75D9C /* Products */,
+				FEBE10D02BCA940600C75D9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +62,7 @@
 				FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */,
 				FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */,
 				FEBE10B22BCA8EC300C75D9C /* Preview Content */,
+				FEBE10D32BCA964600C75D9C /* ContentViewModel.swift */,
 			);
 			path = Quizlet;
 			sourceTree = "<group>";
@@ -67,6 +73,13 @@
 				FEBE10B32BCA8EC300C75D9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FEBE10D02BCA940600C75D9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +98,9 @@
 			dependencies = (
 			);
 			name = Quizlet;
+			packageProductDependencies = (
+				FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */,
+			);
 			productName = Quizlet;
 			productReference = FEBE10A92BCA8EC200C75D9C /* Quizlet.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +157,7 @@
 			files = (
 				FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */,
 				FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */,
+				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +363,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuizletNetworkLayer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEBE10A12BCA8EC200C75D9C /* Project object */;
 }
