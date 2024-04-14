@@ -42,6 +42,15 @@
 		FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEB72BCB4A6D00DF65DF /* RegisterViewStateAction.swift */; };
 		FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEB92BCB4A8000DF65DF /* RegisterViewStateReducer.swift */; };
 		FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECFEEBB2BCB4AA800DF65DF /* RegisterView.swift */; };
+		FEFE30F72BCC3EA8000DCAE3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE30F62BCC3EA8000DCAE3 /* Realm */; };
+		FEFE30F92BCC3EA8000DCAE3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FEFE30F82BCC3EA8000DCAE3 /* RealmSwift */; };
+		FEFE30FD2BCC3F0E000DCAE3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE30FC2BCC3F0E000DCAE3 /* RealmService.swift */; };
+		FEFE31002BCC3F60000DCAE3 /* ChapterModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE30FF2BCC3F60000DCAE3 /* ChapterModelRealm.swift */; };
+		FEFE31022BCC4102000DCAE3 /* ThemeModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31012BCC4102000DCAE3 /* ThemeModelRealm.swift */; };
+		FEFE31042BCC42A2000DCAE3 /* QuestionRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31032BCC42A2000DCAE3 /* QuestionRealmModel.swift */; };
+		FEFE31072BCC4645000DCAE3 /* ChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31062BCC4645000DCAE3 /* ChapterModel.swift */; };
+		FEFE31092BCC4662000DCAE3 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */; };
+		FEFE310B2BCC467D000DCAE3 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +90,13 @@
 		FECFEEB72BCB4A6D00DF65DF /* RegisterViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewStateAction.swift; sourceTree = "<group>"; };
 		FECFEEB92BCB4A8000DF65DF /* RegisterViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewStateReducer.swift; sourceTree = "<group>"; };
 		FECFEEBB2BCB4AA800DF65DF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FEFE30FC2BCC3F0E000DCAE3 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		FEFE30FF2BCC3F60000DCAE3 /* ChapterModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModelRealm.swift; sourceTree = "<group>"; };
+		FEFE31012BCC4102000DCAE3 /* ThemeModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModelRealm.swift; sourceTree = "<group>"; };
+		FEFE31032BCC42A2000DCAE3 /* QuestionRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRealmModel.swift; sourceTree = "<group>"; };
+		FEFE31062BCC4645000DCAE3 /* ChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModel.swift; sourceTree = "<group>"; };
+		FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +106,8 @@
 			files = (
 				FEBE10DB2BCA9E2500C75D9C /* QuizletCommonUI in Frameworks */,
 				FEBE10D22BCA940600C75D9C /* QuizletNetworkLayer in Frameworks */,
+				FEFE30F72BCC3EA8000DCAE3 /* Realm in Frameworks */,
+				FEFE30F92BCC3EA8000DCAE3 /* RealmSwift in Frameworks */,
 				FECFEE782BCB3E6900DF65DF /* QuizletRedux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +138,7 @@
 		FEBE10AB2BCA8EC200C75D9C /* Quizlet */ = {
 			isa = PBXGroup;
 			children = (
+				FEFE30FB2BCC3F03000DCAE3 /* RealmData */,
 				FECFEEA12BCB45B900DF65DF /* Middlewares */,
 				FECFEE9E2BCB44FE00DF65DF /* Navigation */,
 				FECFEE732BCB3E0800DF65DF /* GlobalStates */,
@@ -323,6 +342,36 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		FEFE30FB2BCC3F03000DCAE3 /* RealmData */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE31052BCC463E000DCAE3 /* Models */,
+				FEFE30FE2BCC3F4D000DCAE3 /* RealmModels */,
+				FEFE30FC2BCC3F0E000DCAE3 /* RealmService.swift */,
+			);
+			path = RealmData;
+			sourceTree = "<group>";
+		};
+		FEFE30FE2BCC3F4D000DCAE3 /* RealmModels */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE30FF2BCC3F60000DCAE3 /* ChapterModelRealm.swift */,
+				FEFE31012BCC4102000DCAE3 /* ThemeModelRealm.swift */,
+				FEFE31032BCC42A2000DCAE3 /* QuestionRealmModel.swift */,
+			);
+			path = RealmModels;
+			sourceTree = "<group>";
+		};
+		FEFE31052BCC463E000DCAE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE31062BCC4645000DCAE3 /* ChapterModel.swift */,
+				FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */,
+				FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +392,8 @@
 				FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */,
 				FEBE10DA2BCA9E2500C75D9C /* QuizletCommonUI */,
 				FECFEE772BCB3E6900DF65DF /* QuizletRedux */,
+				FEFE30F62BCC3EA8000DCAE3 /* Realm */,
+				FEFE30F82BCC3EA8000DCAE3 /* RealmSwift */,
 			);
 			productName = Quizlet;
 			productReference = FEBE10A92BCA8EC200C75D9C /* Quizlet.app */;
@@ -372,6 +423,9 @@
 				Base,
 			);
 			mainGroup = FEBE10A02BCA8EC200C75D9C;
+			packageReferences = (
+				FEFE30F52BCC3EA8000DCAE3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = FEBE10AA2BCA8EC200C75D9C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -408,9 +462,12 @@
 				FECFEEB62BCB4A5D00DF65DF /* RegisterViewState.swift in Sources */,
 				FECFEEA82BCB472100DF65DF /* HomeView.swift in Sources */,
 				FECFEE8E2BCB409100DF65DF /* SplashViewState.swift in Sources */,
+				FEFE30FD2BCC3F0E000DCAE3 /* RealmService.swift in Sources */,
 				FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */,
 				FECFEE812BCB3F5A00DF65DF /* AppScreenState.swift in Sources */,
 				FECFEE882BCB406900DF65DF /* ActiveScreensState.swift in Sources */,
+				FEFE31072BCC4645000DCAE3 /* ChapterModel.swift in Sources */,
+				FEFE31092BCC4662000DCAE3 /* ThemeModel.swift in Sources */,
 				FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */,
 				FECFEE942BCB412300DF65DF /* ActiveScreensStateAction.swift in Sources */,
 				FECFEE8A2BCB407A00DF65DF /* SplashView.swift in Sources */,
@@ -422,12 +479,16 @@
 				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
+				FEFE31022BCC4102000DCAE3 /* ThemeModelRealm.swift in Sources */,
 				FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */,
 				FECFEE7E2BCB3EA000DF65DF /* AuthViewStateAction.swift in Sources */,
+				FEFE31002BCC3F60000DCAE3 /* ChapterModelRealm.swift in Sources */,
 				FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */,
 				FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */,
 				FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */,
 				FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */,
+				FEFE31042BCC42A2000DCAE3 /* QuestionRealmModel.swift in Sources */,
+				FEFE310B2BCC467D000DCAE3 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +705,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		FEFE30F52BCC3EA8000DCAE3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.49.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		FEBE10D12BCA940600C75D9C /* QuizletNetworkLayer */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -656,6 +728,16 @@
 		FECFEE772BCB3E6900DF65DF /* QuizletRedux */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = QuizletRedux;
+		};
+		FEFE30F62BCC3EA8000DCAE3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE30F52BCC3EA8000DCAE3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		FEFE30F82BCC3EA8000DCAE3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEFE30F52BCC3EA8000DCAE3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
