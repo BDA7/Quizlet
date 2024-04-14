@@ -15,12 +15,17 @@ final class NavigationModule: ObservableObject {
 
     private init() {}
     
-    public func navigateTo(_ screen: NavigationCases) {
-        switch screen {
-        case .register:
-            self.screens.append(.register)
-        case .removeLast:
-            self.screens.removeLast()
+    public func navigateTo(_ action: NavigationActions) {
+        switch action {
+        
+        case .showScreen(.auth):
+            screens = [.auth]
+        case .showScreen(.home):
+            screens = [.home]
+        case .showScreen(.register):
+            screens.append(.register)
+        case .dismissScreen:
+            screens.removeLast()
         }
     }
 
@@ -29,6 +34,12 @@ final class NavigationModule: ObservableObject {
 extension NavigationModule {
     enum NavigationCases {
         case register
-        case removeLast
+        case home
+        case auth
+    }
+    
+    enum NavigationActions {
+        case showScreen(NavigationCases)
+        case dismissScreen
     }
 }

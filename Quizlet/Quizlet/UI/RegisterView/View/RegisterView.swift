@@ -38,14 +38,8 @@ struct RegisterView: View {
             .padding(.horizontal)
             
             if let message = state?.errorMessage {
-                VStack {
-                    makeErrorAlert(message: message)
-                    Spacer()
-                }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                        self.store.dispatch(RegisterViewStateAction.discardError)
-                    }
+                makeErrorAlert(message: message) {
+                    self.store.dispatch(RegisterViewStateAction.discardError)
                 }
             }
         }

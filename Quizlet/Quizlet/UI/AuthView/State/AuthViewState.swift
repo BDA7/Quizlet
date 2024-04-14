@@ -8,5 +8,15 @@
 import Foundation
 
 struct AuthViewState {
-    
+    let userName: String
+    let password: String
+    let errorMessage: String?
+}
+
+extension AuthViewState {
+    init() {
+        userName = ""
+        password = ""
+        errorMessage = nil
+    }
 }

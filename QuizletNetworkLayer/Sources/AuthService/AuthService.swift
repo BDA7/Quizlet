@@ -13,14 +13,12 @@ public final class AuthService: ObservableObject {
     
     public init() {}
     
-    public func chechAuth() -> AnyPublisher<AuthModel, NetworkError> {
-        if let userModel = userDefaults.object(forKey: "userModel") as? AuthModel {
-            return Just(userModel)
-                .setFailureType(to: NetworkError.self)
-                .eraseToAnyPublisher()
-        }
+    public func chechAuth() -> AnyPublisher<Bool, NetworkError> {
+        let isAuthorize = userDefaults.bool(forKey: "isAuthorize")
+        return Just(isAuthorize)
+            .setFailureType(to: NetworkError.self)
+            .eraseToAnyPublisher()
         
-        return Fail(error: NetworkError.authLoose).eraseToAnyPublisher()
     }
     
     public func register(userName: String, name: String, password: String, checkPassword: String) -> AnyPublisher<Void, NetworkError> {
@@ -40,4 +38,22 @@ public final class AuthService: ObservableObject {
             .eraseToAnyPublisher()
     }
     
+    public func authorize(_ userName: String, password: String) -> AnyPublisher<Void, NetworkError> {
+        if let userData = userDefaults.object(forKey: "userModel") as? Data,
+            let userModel = try? JSONDecoder().decode(AuthModel.self, from: userData),
+            userName == userModel.userName, password == userModel.password
+        {
+            authorizeFlagToogle(isAuthorize: true)
+            return Just(())
+                .setFailureType(to: NetworkError.self)
+                .eraseToAnyPublisher()
+        }
+        
+        authorizeFlagToogle(isAuthorize: false)
+        return Fail(error: NetworkError.authLoose).eraseToAnyPublisher()
+    }
+    
+    private func authorizeFlagToogle(isAuthorize: Bool) {
+        userDefaults.setValue(isAuthorize, forKey: "isAuthorize")
+    }
 }

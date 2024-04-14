@@ -9,5 +9,7 @@ import Foundation
 import QuizletRedux
 
 enum AuthViewStateAction: Action {
-    
+    case authorize(_ userName: String, password: String)
+    case showError(message: String)
+    case discardError
 }

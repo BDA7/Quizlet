@@ -27,6 +27,12 @@ struct AuthView: View {
                 formView
             }
             .padding(.horizontal)
+            
+            if let message = state?.errorMessage {
+                makeErrorAlert(message: message) {
+                    self.store.dispatch(RegisterViewStateAction.discardError)
+                }
+            }
         }
         .onAppear {
             store.dispatch(ActiveScreensStateAction.showScreen(.auth))
@@ -47,7 +53,9 @@ struct AuthView: View {
     private var formView: some View {
         VStack(alignment: .center, spacing: 16) {
             textFieldsByFormView
-            BaseButton(title: "Войти") {}
+            BaseButton(title: "Войти") {
+                store.dispatch(AuthViewStateAction.authorize(userName, password: password))
+            }
             registerLink
         }
     }
@@ -63,7 +71,7 @@ struct AuthView: View {
         HStack {
             Spacer()
             Button(action: {
-                NavigationModule.shared.navigateTo(.register)
+                NavigationModule.shared.navigateTo(.showScreen(.register))
             }, label: {
                 Text("Зарегестрироваться")
             })

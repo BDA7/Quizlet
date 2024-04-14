@@ -18,14 +18,12 @@ struct FlowView: View {
     @EnvironmentObject var store: Store<AppState>
     @StateObject private var navigation = NavigationModule.shared
     var body: some View {
-        if store.publicState.screenState(for: .home) as HomeViewState? != nil {
-            HomeView()
-                .environmentObject(store)
-        } else if store.publicState.screenState(for: .auth) as AuthViewState? != nil {
+        if store.publicState.screenState(for: .auth) as AuthViewState? != nil {
             authFlow
+        } else if store.publicState.screenState(for: .home) as HomeViewState? != nil {
+            homeFlow
         } else {
             SplashView()
-                .environmentObject(store)
         }
     }
     
@@ -38,8 +36,32 @@ struct FlowView: View {
                     case .register:
                         RegisterView()
                             .environmentObject(store)
-                    case .removeLast:
+                    case .auth:
                         AuthView()
+                            .environmentObject(store)
+                    case .home:
+                        HomeView()
+                            .environmentObject(store)
+                    }
+                }
+        }
+        .navigationViewStyle(.stack)
+    }
+    
+    private var homeFlow: some View {
+        NavigationStack(path: $navigation.screens) {
+            HomeView()
+                .environmentObject(store)
+                .navigationDestination(for: NavigationModule.NavigationCases.self) { val in
+                    switch val {
+                    case .register:
+                        RegisterView()
+                            .environmentObject(store)
+                    case .auth:
+                        AuthView()
+                            .environmentObject(store)
+                    case .home:
+                        HomeView()
                             .environmentObject(store)
                     }
                 }

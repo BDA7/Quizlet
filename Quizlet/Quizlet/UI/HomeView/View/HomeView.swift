@@ -14,7 +14,7 @@ struct HomeView: View {
     var state: HomeViewState? { store.publicState.screenState(for: .home) }
     
     var body: some View {
-        Text("Hello, World!")
+        Text("Home View")
             .onAppear {
                 store.dispatch(ActiveScreensStateAction.showScreen(.home))
             }

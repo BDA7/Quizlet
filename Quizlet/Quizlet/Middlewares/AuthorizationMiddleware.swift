@@ -17,8 +17,12 @@ extension Middlewares {
         switch action {
         case SplashViewStateAction.checkAuth:
             return authRepository.chechAuth()
-                .map { model in
-                    ActiveScreensStateAction.showScreen(.home)
+                .map { isAuth in
+                    if isAuth {
+                        ActiveScreensStateAction.showScreen(.home)
+                    } else {
+                        ActiveScreensStateAction.showScreen(.auth)
+                    }
                 }
                 .catch({ _ in
                     Just(ActiveScreensStateAction.showScreen(.auth)).eraseToAnyPublisher()
@@ -27,11 +31,21 @@ extension Middlewares {
         case RegisterViewStateAction.register(let userName, let name, let password, let checkPassword):
             return authRepository.register(userName: userName, name: name, password: password, checkPassword: checkPassword)
                 .map { _ in
-                    NavigationModule.shared.navigateTo(.removeLast)
+                    NavigationModule.shared.navigateTo(.dismissScreen)
                     return ActiveScreensStateAction.showScreen(.auth)
                 }
                 .catch { netErro in
                     Just(RegisterViewStateAction.showError(netErro.localizedDescription)).eraseToAnyPublisher()
+                }
+                .eraseToAnyPublisher()
+        case AuthViewStateAction.authorize(let userName, let password):
+            return authRepository.authorize(userName, password: password)
+                .map { _ in
+                    NavigationModule.shared.navigateTo(.showScreen(.home))
+                    return ActiveScreensStateAction.showScreen(.home)
+                }
+                .catch { netError in
+                    Just(AuthViewStateAction.showError(message: netError.localizedDescription)).eraseToAnyPublisher()
                 }
                 .eraseToAnyPublisher()
         default: return Empty().eraseToAnyPublisher()
