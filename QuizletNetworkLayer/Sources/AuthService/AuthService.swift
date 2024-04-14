@@ -23,9 +23,21 @@ public final class AuthService: ObservableObject {
         return Fail(error: NetworkError.authLoose).eraseToAnyPublisher()
     }
     
-    public func register(_ userName: String, _ password: String) {
-        let authModel = AuthModel(name: userName, password: password)
+    public func register(userName: String, name: String, password: String, checkPassword: String) -> AnyPublisher<Void, NetworkError> {
+        guard !userName.isEmpty, !name.isEmpty, !password.isEmpty, password == checkPassword else {
+            return Fail(error: NetworkError.failRegister).eraseToAnyPublisher()
+        }
         
-        userDefaults.setValue(authModel, forKey: "userModel")
+        let authModel = AuthModel(userName: userName, name: name, password: password)
+        if let authData = try? JSONEncoder().encode(authModel) {
+            userDefaults.setValue(authData, forKey: "userModel")
+        } else {
+            return Fail(error: NetworkError.failRegister).eraseToAnyPublisher()
+        }
+        
+        return Just(())
+            .setFailureType(to: NetworkError.self)
+            .eraseToAnyPublisher()
     }
+    
 }

@@ -19,9 +19,9 @@ final class NavigationModule: ObservableObject {
         switch screen {
         case .register:
             self.screens.append(.register)
+        case .removeLast:
+            self.screens.removeLast()
         }
-        
-        print(screens)
     }
 
 }
@@ -29,5 +29,6 @@ final class NavigationModule: ObservableObject {
 extension NavigationModule {
     enum NavigationCases {
         case register
+        case removeLast
     }
 }

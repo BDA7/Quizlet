@@ -9,4 +9,5 @@ import Foundation
 
 public enum NetworkError: Error {
     case authLoose
+    case failRegister
 }

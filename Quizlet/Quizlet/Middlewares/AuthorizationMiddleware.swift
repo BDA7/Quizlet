@@ -24,6 +24,16 @@ extension Middlewares {
                     Just(ActiveScreensStateAction.showScreen(.auth)).eraseToAnyPublisher()
                 })
                 .eraseToAnyPublisher()
+        case RegisterViewStateAction.register(let userName, let name, let password, let checkPassword):
+            return authRepository.register(userName: userName, name: name, password: password, checkPassword: checkPassword)
+                .map { _ in
+                    NavigationModule.shared.navigateTo(.removeLast)
+                    return ActiveScreensStateAction.showScreen(.auth)
+                }
+                .catch { netErro in
+                    Just(RegisterViewStateAction.showError(netErro.localizedDescription)).eraseToAnyPublisher()
+                }
+                .eraseToAnyPublisher()
         default: return Empty().eraseToAnyPublisher()
         }
         

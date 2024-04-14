@@ -8,6 +8,7 @@
 import Foundation
 
 public struct AuthModel: Codable {
+    let userName: String
     let name: String
     let password: String
 }

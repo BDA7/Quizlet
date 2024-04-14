@@ -38,6 +38,9 @@ struct FlowView: View {
                     case .register:
                         RegisterView()
                             .environmentObject(store)
+                    case .removeLast:
+                        AuthView()
+                            .environmentObject(store)
                     }
                 }
         }

@@ -9,5 +9,7 @@ import Foundation
 import QuizletRedux
 
 enum RegisterViewStateAction: Action {
-    
+    case register(userName: String, name: String, password: String, checkPassword: String)
+    case showError(_ message: String)
+    case discardError
 }

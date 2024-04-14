@@ -26,6 +26,7 @@ struct AuthView: View {
                 titleView
                 formView
             }
+            .padding(.horizontal)
         }
         .onAppear {
             store.dispatch(ActiveScreensStateAction.showScreen(.auth))
