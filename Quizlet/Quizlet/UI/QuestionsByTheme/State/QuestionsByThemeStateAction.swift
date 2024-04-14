@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import QuizletRedux
+
+enum QuestionsByThemeStateAction: Action {
+    case fetchQuestions(_ themeId: Int)
+    case updateQuestions(_ questions: [QuestionModel])
+}

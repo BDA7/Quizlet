@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ThemeModel {
+struct ThemeModel: Hashable {
     let title: String
     let themeId: Int
     let chapterId: Int

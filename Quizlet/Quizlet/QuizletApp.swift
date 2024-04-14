@@ -39,9 +39,7 @@ struct FlowView: View {
                     case .auth:
                         AuthView()
                             .environmentObject(store)
-                    case .home:
-                        HomeView()
-                            .environmentObject(store)
+                    default: EmptyView()
                     }
                 }
         }
@@ -54,15 +52,12 @@ struct FlowView: View {
                 .environmentObject(store)
                 .navigationDestination(for: NavigationModule.NavigationCases.self) { val in
                     switch val {
-                    case .register:
-                        RegisterView()
-                            .environmentObject(store)
-                    case .auth:
-                        AuthView()
-                            .environmentObject(store)
                     case .home:
                         HomeView()
                             .environmentObject(store)
+                    case .questionsByTheme(let id):
+                        QuestionsByTheme(themeId: id)
+                    default: EmptyView()
                     }
                 }
         }

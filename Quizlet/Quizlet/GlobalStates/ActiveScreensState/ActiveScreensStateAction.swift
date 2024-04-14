@@ -13,6 +13,7 @@ enum AppScreen: Hashable {
     case splash
     case home
     case register
+    case questionsByTheme(id: Int)
 }
 
 enum ActiveScreensStateAction: Action {

@@ -191,7 +191,7 @@ extension RealmService {
         }
     }
     
-    func getThemesByChapter(chapterId: Int, _ completion: @escaping ([ThemeModel]) -> Void) {
+    func getThemesByChapter(_ completion: @escaping ([ThemeModel]) -> Void) {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             let findingRealmModels = realm.objects(ThemeModelRealm.self)

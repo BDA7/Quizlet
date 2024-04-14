@@ -21,10 +21,12 @@ struct HomeView: View {
             VStack {
                 ScrollView {
                     VStack {
-                        if let chapters = state?.chapters {
+                        if let chapters = state?.chapters, let themes = state?.themes {
                             ForEach(chapters) { chapter in
-                                Text(chapter.name)
-                                    .foregroundStyle(.black)
+                                ChapterGrid(
+                                    chapterModel: chapter,
+                                    themes: themes.filter { $0.chapterId == chapter.chapterId }
+                                )
                             }
                         }
                     }
@@ -34,10 +36,12 @@ struct HomeView: View {
         .onAppear {
             store.dispatch(ActiveScreensStateAction.showScreen(.home))
             store.dispatch(HomeViewStateAction.fetchChapters)
+            store.dispatch(HomeViewStateAction.fetchThemes)
         }
     }
 }
 
 #Preview {
     HomeView()
+        .environmentObject(store)
 }

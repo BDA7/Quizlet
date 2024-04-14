@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct QuestionsByThemeState {
+    let themeId: Int
+    let questions: [QuestionModel]
+}
+
+extension QuestionsByThemeState {
+    init(id: Int) {
+        themeId = id
+        questions = []
+    }
+}

@@ -12,6 +12,7 @@ enum AppScreenState {
     case splash(SplashViewState)
     case home(HomeViewState)
     case register(RegisterViewState)
+    case questionsByTheme(QuestionsByThemeState)
 }
 
 extension AppScreenState: CustomStringConvertible {
@@ -25,6 +26,8 @@ extension AppScreenState: CustomStringConvertible {
             return "Home View"
         case .register:
             return "Register View"
+        case .questionsByTheme(let state):
+            return "Questions View \(state.themeId)"
         }
     }
 }
@@ -34,7 +37,8 @@ extension AppScreenState {
         switch (lhs, rhs) {
         case (.splash, .splash), (.auth, .auth), (.home, .home), (.register, .register):
             return true
-        case (.splash, _), (.auth, _), (.home, _), (.register, _):
+        case (.questionsByTheme(let state), .questionsByTheme(let id)): return state.themeId == id
+        case (.splash, _), (.auth, _), (.home, _), (.register, _), (.questionsByTheme, _):
             return false
         }
     }

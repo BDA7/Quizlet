@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChapterModel: Identifiable {
+struct ChapterModel: Identifiable, Hashable {
     let name: String
     let chapterId: Int
 }

@@ -9,10 +9,12 @@ import Foundation
 
 struct HomeViewState {
     let chapters: [ChapterModel]
+    let themes: [ThemeModel]
 }
 
 extension HomeViewState {
     init() {
         chapters = []
+        themes = []
     }
 }

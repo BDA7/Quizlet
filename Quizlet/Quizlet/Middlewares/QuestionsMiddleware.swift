@@ -21,6 +21,19 @@ extension Middlewares {
                 }
                 .eraseToAnyPublisher()
             
+        case QuestionsByThemeStateAction.fetchQuestions(let themeId):
+            return questionsRepository.getQuestionsByTheme(themeId)
+                .map { questions in
+                    QuestionsByThemeStateAction.updateQuestions(questions)
+                }
+                .eraseToAnyPublisher()
+        case HomeViewStateAction.fetchThemes:
+            return questionsRepository.getThemes()
+                .map { themes in
+                    HomeViewStateAction.updateThemes(themes)
+                }
+                .eraseToAnyPublisher()
+            
         default: return Empty().eraseToAnyPublisher()
         }
     }

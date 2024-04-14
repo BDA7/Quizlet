@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0556A52BCC6D2500126D7A /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556A42BCC6D2500126D7A /* ThemeCell.swift */; };
+		FE0556A82BCC722200126D7A /* QuestionsByTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556A72BCC722200126D7A /* QuestionsByTheme.swift */; };
+		FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AB2BCC733000126D7A /* QuestionsByThemeState.swift */; };
+		FE0556AE2BCC734600126D7A /* QuestionsByThemeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AD2BCC734600126D7A /* QuestionsByThemeStateAction.swift */; };
+		FE0556B02BCC735900126D7A /* QuestionsByThemeStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AF2BCC735900126D7A /* QuestionsByThemeStateReducer.swift */; };
 		FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */; };
 		FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */; };
 		FEBE10B12BCA8EC300C75D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */; };
@@ -57,6 +62,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0556A42BCC6D2500126D7A /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
+		FE0556A72BCC722200126D7A /* QuestionsByTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByTheme.swift; sourceTree = "<group>"; };
+		FE0556AB2BCC733000126D7A /* QuestionsByThemeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeState.swift; sourceTree = "<group>"; };
+		FE0556AD2BCC734600126D7A /* QuestionsByThemeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeStateAction.swift; sourceTree = "<group>"; };
+		FE0556AF2BCC735900126D7A /* QuestionsByThemeStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeStateReducer.swift; sourceTree = "<group>"; };
 		FEBE10A92BCA8EC200C75D9C /* Quizlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizletApp.swift; sourceTree = "<group>"; };
 		FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +131,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0556A62BCC721400126D7A /* QuestionsByTheme */ = {
+			isa = PBXGroup;
+			children = (
+				FE0556AA2BCC732400126D7A /* State */,
+				FE0556A92BCC732000126D7A /* View */,
+			);
+			path = QuestionsByTheme;
+			sourceTree = "<group>";
+		};
+		FE0556A92BCC732000126D7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE0556A72BCC722200126D7A /* QuestionsByTheme.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE0556AA2BCC732400126D7A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FE0556AB2BCC733000126D7A /* QuestionsByThemeState.swift */,
+				FE0556AD2BCC734600126D7A /* QuestionsByThemeStateAction.swift */,
+				FE0556AF2BCC735900126D7A /* QuestionsByThemeStateReducer.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		FEBE10A02BCA8EC200C75D9C = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +213,7 @@
 		FEBE10D52BCA9CF000C75D9C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FE0556A62BCC721400126D7A /* QuestionsByTheme */,
 				FECFEEB22BCB4A4600DF65DF /* RegisterView */,
 				FECFEEA42BCB470A00DF65DF /* HomeView */,
 				FECFEE722BCB3DD000DF65DF /* SplashView */,
@@ -309,6 +347,7 @@
 			children = (
 				FECFEEA72BCB472100DF65DF /* HomeView.swift */,
 				FEFE31122BCC4E6D000DCAE3 /* ChapterGrid.swift */,
+				FE0556A42BCC6D2500126D7A /* ThemeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -462,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECFEE832BCB3FC000DF65DF /* AppScreenStateReducer.swift in Sources */,
+				FE0556B02BCC735900126D7A /* QuestionsByThemeStateReducer.swift in Sources */,
 				FECFEE9D2BCB431800DF65DF /* AppState+ScreenStateSelector.swift in Sources */,
 				FECFEE902BCB409B00DF65DF /* SplashViewStateAction.swift in Sources */,
 				FECFEEAA2BCB472F00DF65DF /* HomeViewState.swift in Sources */,
@@ -471,6 +511,7 @@
 				FECFEEB62BCB4A5D00DF65DF /* RegisterViewState.swift in Sources */,
 				FECFEEA82BCB472100DF65DF /* HomeView.swift in Sources */,
 				FECFEE8E2BCB409100DF65DF /* SplashViewState.swift in Sources */,
+				FE0556A82BCC722200126D7A /* QuestionsByTheme.swift in Sources */,
 				FEFE30FD2BCC3F0E000DCAE3 /* RealmService.swift in Sources */,
 				FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */,
 				FECFEE812BCB3F5A00DF65DF /* AppScreenState.swift in Sources */,
@@ -484,10 +525,12 @@
 				FECFEE962BCB414200DF65DF /* ActiveScreensStateReducer.swift in Sources */,
 				FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */,
 				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
+				FE0556AE2BCC734600126D7A /* QuestionsByThemeStateAction.swift in Sources */,
 				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
 				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
 				FEFE31132BCC4E6D000DCAE3 /* ChapterGrid.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
+				FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
 				FEFE31022BCC4102000DCAE3 /* ThemeModelRealm.swift in Sources */,
 				FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */,
@@ -500,6 +543,7 @@
 				FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */,
 				FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */,
 				FEFE31042BCC42A2000DCAE3 /* QuestionRealmModel.swift in Sources */,
+				FE0556A52BCC6D2500126D7A /* ThemeCell.swift in Sources */,
 				FEFE310B2BCC467D000DCAE3 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

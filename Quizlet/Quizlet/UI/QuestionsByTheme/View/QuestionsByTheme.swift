@@ -6,14 +6,26 @@
 //
 
 import SwiftUI
+import QuizletRedux
 
 struct QuestionsByTheme: View {
+    @EnvironmentObject var store: Store<AppState>
+    
+    var state: QuestionsByThemeState? { store.publicState.screenState(for: .questionsByTheme(id: themeId)) }
+    
     let themeId: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
+            .onAppear {
+                store.dispatch(ActiveScreensStateAction.showScreen(.questionsByTheme(id: themeId)))
+                store.dispatch(QuestionsByThemeStateAction.fetchQuestions(themeId))
+            }
+        
     }
 }
 
 #Preview {
     QuestionsByTheme(themeId: 0)
+        .environmentObject(store)
 }

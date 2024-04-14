@@ -11,4 +11,6 @@ import QuizletRedux
 enum HomeViewStateAction: Action {
     case fetchChapters
     case updateChapters(_ chapters: [ChapterModel])
+    case fetchThemes
+    case updateThemes(_ themes: [ThemeModel])
 }

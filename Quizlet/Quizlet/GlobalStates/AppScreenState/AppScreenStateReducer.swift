@@ -16,6 +16,7 @@ extension AppScreenState {
         case .splash(let state): return .splash(SplashViewState.reducer(state, action))
         case .home(let state): return .home(HomeViewState.reducer(state, action))
         case .register(let state): return .register(RegisterViewState.reducer(state, action))
+        case .questionsByTheme(let state): return .questionsByTheme(QuestionsByThemeState.reducer(state, action))
         }
     }
 }

@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct ThemeCell: View {
+    let themeModel: ThemeModel
+    let action: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            action()
+        } label: {
+            Text(themeModel.title)
+                .foregroundStyle(.black)
+                .font(.title3)
+                .fontWeight(.regular)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 24.0)
+                .fill(.white)
+        )
+        .shadow(color: .gray, radius: 1)
     }
 }
 
 #Preview {
-    ThemeCell()
+    ThemeCell(themeModel: ThemeModel(title: "Темbretbttb tbrvbervervrevrevrevа", themeId: 0, chapterId: 1), action: {})
 }

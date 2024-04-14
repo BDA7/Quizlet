@@ -17,10 +17,12 @@ extension ActiveScreensState {
             switch action {
             case .showScreen(.auth), .dismissScreen(.register):
                 screens = [.auth(AuthViewState())]
-            case .showScreen(.home):
+            case .showScreen(.home), .dismissScreen(.questionsByTheme):
                 screens = [.home(HomeViewState())]
             case .showScreen(.register):
                 screens += [.register(RegisterViewState())]
+            case .showScreen(.questionsByTheme(let id)):
+                screens += [.questionsByTheme(QuestionsByThemeState(id: id))]
             case .dismissScreen(.auth), .showScreen(.splash), .dismissScreen(.splash), .dismissScreen(.home):
                 screens = [.splash(SplashViewState())]
             }

@@ -26,16 +26,19 @@ final class NavigationModule: ObservableObject {
             screens.append(.register)
         case .dismissScreen:
             screens.removeLast()
+        case .showScreen(.questionsByTheme(let id)):
+            screens.append(.questionsByTheme(id: id))
         }
     }
 
 }
 
 extension NavigationModule {
-    enum NavigationCases {
+    enum NavigationCases: Hashable {
         case register
         case home
         case auth
+        case questionsByTheme(id: Int)
     }
     
     enum NavigationActions {
