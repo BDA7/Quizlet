@@ -12,6 +12,7 @@
 		FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AB2BCC733000126D7A /* QuestionsByThemeState.swift */; };
 		FE0556AE2BCC734600126D7A /* QuestionsByThemeStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AD2BCC734600126D7A /* QuestionsByThemeStateAction.swift */; };
 		FE0556B02BCC735900126D7A /* QuestionsByThemeStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556AF2BCC735900126D7A /* QuestionsByThemeStateReducer.swift */; };
+		FE0556B22BCC7A9E00126D7A /* CurrentQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0556B12BCC7A9E00126D7A /* CurrentQuestionView.swift */; };
 		FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */; };
 		FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */; };
 		FEBE10B12BCA8EC300C75D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		FE0556AB2BCC733000126D7A /* QuestionsByThemeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeState.swift; sourceTree = "<group>"; };
 		FE0556AD2BCC734600126D7A /* QuestionsByThemeStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeStateAction.swift; sourceTree = "<group>"; };
 		FE0556AF2BCC735900126D7A /* QuestionsByThemeStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeStateReducer.swift; sourceTree = "<group>"; };
+		FE0556B12BCC7A9E00126D7A /* CurrentQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestionView.swift; sourceTree = "<group>"; };
 		FEBE10A92BCA8EC200C75D9C /* Quizlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizletApp.swift; sourceTree = "<group>"; };
 		FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0556A72BCC722200126D7A /* QuestionsByTheme.swift */,
+				FE0556B12BCC7A9E00126D7A /* CurrentQuestionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				FE0556AE2BCC734600126D7A /* QuestionsByThemeStateAction.swift in Sources */,
 				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
 				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
+				FE0556B22BCC7A9E00126D7A /* CurrentQuestionView.swift in Sources */,
 				FEFE31132BCC4E6D000DCAE3 /* ChapterGrid.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
 				FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */,

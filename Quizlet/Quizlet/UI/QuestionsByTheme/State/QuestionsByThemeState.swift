@@ -10,11 +10,13 @@ import Foundation
 struct QuestionsByThemeState {
     let themeId: Int
     let questions: [QuestionModel]
+    let currentQuestion: QuestionModel?
 }
 
 extension QuestionsByThemeState {
     init(id: Int) {
         themeId = id
         questions = []
+        currentQuestion = nil
     }
 }
