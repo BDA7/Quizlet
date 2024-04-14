@@ -24,7 +24,7 @@ struct QuestionsByTheme: View {
                 .ignoresSafeArea(.all)
             
             Group {
-                if let questions = state?.questions, questions.count == currentPage {
+                if let questions = state?.questions, questions.count > 0, questions.count == currentPage {
                     finalScoreView
                 } else {
                     questionView
@@ -50,7 +50,9 @@ struct QuestionsByTheme: View {
     private var questionView: some View {
         VStack {
             if let questions = state?.questions, questions.count > 0 {
-                PageIdentifier(percentage: CGFloat(currentPage / questions.count))
+                PageIdentifier(
+                    percentage: (CGFloat(currentPage)/CGFloat(questions.count))
+                )
             }
             
             if let currentQuestion = state?.currentQuestion {

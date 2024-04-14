@@ -22,8 +22,8 @@ public struct PageIdentifier: View {
                     .foregroundColor(Color.gray.opacity(0.3))
                 
                 Rectangle()
-                    .frame(width: geometry.size.width * percentage / 100, height: geometry.size.height)
-                    .foregroundColor(.blue)
+                    .frame(width: geometry.size.width * percentage, height: geometry.size.height)
+                    .foregroundColor(.orange)
                     .animation(.easeInOut(duration: 0.5)) // Анимация изменения ширины прямоугольника
             }
         }
@@ -32,5 +32,5 @@ public struct PageIdentifier: View {
 }
 
 #Preview {
-    PageIdentifier(percentage: 30)
+    PageIdentifier(percentage: 0.25)
 }

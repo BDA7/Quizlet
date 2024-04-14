@@ -55,9 +55,10 @@ public final class Store<State>: ObservableObject {
                 .store(in: &subscriptions, key: key)
         }
 
-        withAnimation(.easeInOut(duration: 0.5)) {
-            state = newState
-        }
+//        withAnimation(.easeInOut(duration: 0.5)) {
+//        }
+        state = newState
+
     }
 }
 

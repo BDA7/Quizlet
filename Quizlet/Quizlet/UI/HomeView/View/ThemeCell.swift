@@ -15,18 +15,20 @@ struct ThemeCell: View {
         Button {
             action()
         } label: {
-            Text(themeModel.title)
-                .foregroundStyle(.black)
-                .font(.title3)
-                .fontWeight(.regular)
-                .fixedSize(horizontal: false, vertical: true)
+            HStack {
+                Text(themeModel.title)
+                    .foregroundStyle(.black)
+                    .font(.title3)
+                    .fontWeight(.regular)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+            }
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 24.0)
-                .fill(.white)
+                .fill(Color.baseCell)
         )
-        .shadow(color: .gray, radius: 1)
     }
 }
 

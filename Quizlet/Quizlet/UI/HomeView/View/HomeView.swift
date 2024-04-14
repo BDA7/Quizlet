@@ -20,7 +20,7 @@ struct HomeView: View {
             
             VStack {
                 ScrollView {
-                    VStack {
+                    VStack(spacing: 32) {
                         if let chapters = state?.chapters, let themes = state?.themes {
                             ForEach(chapters) { chapter in
                                 ChapterGrid(

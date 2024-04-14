@@ -16,18 +16,13 @@ struct ChapterGrid: View {
     let chapterModel: ChapterModel
     let themes: [ThemeModel]
     
-    private var columns: [GridItem] = [
-        GridItem(.adaptive(minimum: 180, maximum: 500)),
-        GridItem(.adaptive(minimum: 150))
-    ]
-    
     public init(chapterModel: ChapterModel, themes: [ThemeModel]) {
         self.chapterModel = chapterModel
         self.themes = themes
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             nameChapterView
             themesCollection
         }
@@ -45,13 +40,16 @@ struct ChapterGrid: View {
     }
     
     private var themesCollection: some View {
-        LazyVGrid(columns: columns, content: {
-            ForEach(themes) { theme in
-                ThemeCell(themeModel: theme, action: {
-                    NavigationModule.shared.navigateTo(.showScreen(.questionsByTheme(id: theme.id)))
-                })
+        ScrollView(.vertical) {
+            LazyVStack {
+                ForEach(themes) { theme in
+                    ThemeCell(themeModel: theme, action: {
+                        NavigationModule.shared.navigateTo(.showScreen(.questionsByTheme(id: theme.id)))
+                    })
+                }
             }
-        })
+            .padding(.horizontal)
+        }
     }
 }
 
