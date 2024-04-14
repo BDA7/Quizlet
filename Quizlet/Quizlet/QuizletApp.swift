@@ -11,7 +11,7 @@ import QuizletRedux
 let store = Store(
     initial: AppState(),
     reducer: AppState.reducer,
-    middlewares: [Middlewares.authorization, Middlewares.logger]
+    middlewares: [Middlewares.authorization, Middlewares.logger, Middlewares.questions]
 )
 
 struct FlowView: View {

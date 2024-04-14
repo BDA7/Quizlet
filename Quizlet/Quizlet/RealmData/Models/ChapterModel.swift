@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct ChapterModel {
+struct ChapterModel: Identifiable {
     let name: String
     let chapterId: Int
+}
+
+extension ChapterModel {
+    var id: Int {
+        return chapterId
+    }
 }

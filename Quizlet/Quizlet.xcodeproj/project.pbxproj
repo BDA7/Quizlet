@@ -51,6 +51,9 @@
 		FEFE31072BCC4645000DCAE3 /* ChapterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31062BCC4645000DCAE3 /* ChapterModel.swift */; };
 		FEFE31092BCC4662000DCAE3 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */; };
 		FEFE310B2BCC467D000DCAE3 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */; };
+		FEFE310D2BCC489D000DCAE3 /* QuestionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE310C2BCC489D000DCAE3 /* QuestionsRepository.swift */; };
+		FEFE310F2BCC4A88000DCAE3 /* QuestionsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE310E2BCC4A88000DCAE3 /* QuestionsMiddleware.swift */; };
+		FEFE31132BCC4E6D000DCAE3 /* ChapterGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE31122BCC4E6D000DCAE3 /* ChapterGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +100,9 @@
 		FEFE31062BCC4645000DCAE3 /* ChapterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterModel.swift; sourceTree = "<group>"; };
 		FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		FEFE310C2BCC489D000DCAE3 /* QuestionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsRepository.swift; sourceTree = "<group>"; };
+		FEFE310E2BCC4A88000DCAE3 /* QuestionsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsMiddleware.swift; sourceTree = "<group>"; };
+		FEFE31122BCC4E6D000DCAE3 /* ChapterGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +290,7 @@
 			children = (
 				FECFEEA22BCB45CA00DF65DF /* AuthorizationMiddleware.swift */,
 				FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */,
+				FEFE310E2BCC4A88000DCAE3 /* QuestionsMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				FECFEEA72BCB472100DF65DF /* HomeView.swift */,
+				FEFE31122BCC4E6D000DCAE3 /* ChapterGrid.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 				FEFE31052BCC463E000DCAE3 /* Models */,
 				FEFE30FE2BCC3F4D000DCAE3 /* RealmModels */,
 				FEFE30FC2BCC3F0E000DCAE3 /* RealmService.swift */,
+				FEFE310C2BCC489D000DCAE3 /* QuestionsRepository.swift */,
 			);
 			path = RealmData;
 			sourceTree = "<group>";
@@ -477,11 +486,14 @@
 				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
 				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
 				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
+				FEFE31132BCC4E6D000DCAE3 /* ChapterGrid.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
 				FEFE31022BCC4102000DCAE3 /* ThemeModelRealm.swift in Sources */,
 				FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */,
+				FEFE310D2BCC489D000DCAE3 /* QuestionsRepository.swift in Sources */,
 				FECFEE7E2BCB3EA000DF65DF /* AuthViewStateAction.swift in Sources */,
+				FEFE310F2BCC4A88000DCAE3 /* QuestionsMiddleware.swift in Sources */,
 				FEFE31002BCC3F60000DCAE3 /* ChapterModelRealm.swift in Sources */,
 				FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */,
 				FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */,

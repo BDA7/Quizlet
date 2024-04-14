@@ -8,5 +8,11 @@
 import Foundation
 
 struct HomeViewState {
-    
+    let chapters: [ChapterModel]
+}
+
+extension HomeViewState {
+    init() {
+        chapters = []
+    }
 }

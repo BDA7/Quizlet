@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ChapterGrid: View {
+    let chapterModel: ChapterModel
+    let themes: [ThemeModel]
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ChapterGrid()
+    ChapterGrid(chapterModel: ChapterModel(name: "Что-то", chapterId: 0), themes: [])
 }

@@ -14,3 +14,9 @@ struct QuestionModel {
     let incorrectAnswerTwo: String
     let themeId: Int
 }
+
+extension QuestionModel: Identifiable {
+    var id: String {
+        return title
+    }
+}

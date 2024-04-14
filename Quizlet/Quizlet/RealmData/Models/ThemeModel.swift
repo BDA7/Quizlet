@@ -12,3 +12,9 @@ struct ThemeModel {
     let themeId: Int
     let chapterId: Int
 }
+
+extension ThemeModel: Identifiable {
+    var id: Int {
+        return themeId
+    }
+}

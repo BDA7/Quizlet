@@ -14,10 +14,27 @@ struct HomeView: View {
     var state: HomeViewState? { store.publicState.screenState(for: .home) }
     
     var body: some View {
-        Text("Home View")
-            .onAppear {
-                store.dispatch(ActiveScreensStateAction.showScreen(.home))
+        ZStack {
+            Color.white
+                .ignoresSafeArea(.all)
+            
+            VStack {
+                ScrollView {
+                    VStack {
+                        if let chapters = state?.chapters {
+                            ForEach(chapters) { chapter in
+                                Text(chapter.name)
+                                    .foregroundStyle(.black)
+                            }
+                        }
+                    }
+                }
             }
+        }
+        .onAppear {
+            store.dispatch(ActiveScreensStateAction.showScreen(.home))
+            store.dispatch(HomeViewStateAction.fetchChapters)
+        }
     }
 }
 

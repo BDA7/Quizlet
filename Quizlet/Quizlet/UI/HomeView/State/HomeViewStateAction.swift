@@ -9,5 +9,6 @@ import Foundation
 import QuizletRedux
 
 enum HomeViewStateAction: Action {
-    
+    case fetchChapters
+    case updateChapters(_ chapters: [ChapterModel])
 }

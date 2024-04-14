@@ -93,6 +93,13 @@ extension RealmService {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             
+            let findingModels = realm.objects(ChapterModelRealm.self)
+                .filter { $0.name == chapterName && $0.chapterId == chapterId }
+            
+            if findingModels.count > 0 {
+                return
+            }
+            
             let realmModel = ChapterModelRealm(name: chapterName, chapterId: chapterId)
             
             try? realm.write({
@@ -105,13 +112,34 @@ extension RealmService {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             
+            let findingModels = realm.objects(ThemeModelRealm.self)
+                .filter { $0.themeId == themeId && $0.title == themeName && $0.chapterId == chapterId }
+            
+            if findingModels.count > 0 {
+                return
+            }
+            
             let realmModel = ThemeModelRealm(title: themeName, themeId: themeId, chapterId: chapterId)
+            
+            try? realm.write({
+                realm.add(realmModel)
+            })
         }
     }
     
     func addQuestion(_ title: String, correctAnswer: String, incorrectAnswer: String, incorrectAnswerTwo: String, themeId: Int) {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            let findingModels = realm.objects(QuestionRealmModel.self)
+                .filter { 
+                    $0.title == title && $0.correctAnswer == correctAnswer &&
+                    $0.incorrectAnswer == incorrectAnswer && $0.themeId == themeId
+                }
+            
+            if findingModels.count > 0 {
+                return
+            }
             
             let realmModel = QuestionRealmModel(
                 title: title, correctAnswer: correctAnswer,
