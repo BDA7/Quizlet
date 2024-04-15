@@ -14,6 +14,8 @@ enum AppScreen: Hashable {
     case home
     case register
     case questionsByTheme(id: Int)
+    case profile
+    case results
 }
 
 enum ActiveScreensStateAction: Action {

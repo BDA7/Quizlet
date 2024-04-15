@@ -18,6 +18,8 @@ extension AppState {
                 case (.register(let state), .register): return state as? State
                 case (.questionsByTheme(let state), .questionsByTheme(let id)) where state.themeId == id:
                     return state as? State
+                case (.profile(let state), .profile): return state as? State
+                case (.results(let state), .results): return state as? State
                 default: return nil
                     
                 }

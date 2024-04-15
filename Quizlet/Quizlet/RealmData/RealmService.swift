@@ -261,4 +261,69 @@ extension RealmService {
             completion(nil)
         }
     }
+    
+    func getCurrentProfile(userName: String, _ completion: @escaping (ProfileModel?) -> Void) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            guard
+                let findingRealmModels = realm.objects(ProfileModelRealm.self).filter({ $0.userName == userName }).first else {
+                    completion(nil)
+                    return
+                }
+            
+            let profileModel = ProfileModel(userName: findingRealmModels.userName, firstName: findingRealmModels.firstName, password: findingRealmModels.password)
+            
+            completion(profileModel)
+        }
+    }
+    
+    func addQuestionResult(_ model: QuestionResultModel) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            guard
+                let findingRealmModel = realm.objects(QuestionResultModelRealm.self).filter({
+                    $0.themeId == model.themeId && $0.userName == model.userName
+                }).first else {
+                    return
+                }
+            
+            try? realm.write({
+                findingRealmModel.finalScore = model.finalScore
+            })
+        }
+    }
+    
+    func getUserResults(_ userName: String, _ completion: @escaping ([QuestionResultModel]) -> Void) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            var resultArr: [QuestionResultModel] = []
+            
+            let findingModels = realm.objects(QuestionResultModelRealm.self).filter({$0.userName == userName})
+            
+            for findingModel in findingModels {
+                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeId: findingModel.themeId, userName: findingModel.userName))
+            }
+            
+            completion(resultArr)
+        }
+    }
+    
+    func getAllResults(_ completion: @escaping ([QuestionResultModel]) -> Void) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            var resultArr: [QuestionResultModel] = []
+            
+            let findingModels = realm.objects(QuestionResultModelRealm.self)
+            
+            for findingModel in findingModels {
+                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeId: findingModel.themeId, userName: findingModel.userName))
+            }
+            
+            completion(resultArr)
+        }
+    }
 }

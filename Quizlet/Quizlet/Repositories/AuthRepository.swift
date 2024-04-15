@@ -16,11 +16,9 @@ final class AuthRepository: ObservableObject {
         return Future<ProfileModel, NetworkError> { [weak self] promise in
             RealmService.shared.getProfile(userName: userName, password: password) { profile in
                 if let profile = profile {
+                    self?.userDefaults.setValue(profile.userName, forKey: "currentUserName")
                     promise(.success(profile))
                     self?.authorizeFlagToogle(isAuthorize: true)
-                } else {
-                    promise(.failure(NetworkError.authLoose))
-                    self?.authorizeFlagToogle(isAuthorize: false)
                 }
             }
         }

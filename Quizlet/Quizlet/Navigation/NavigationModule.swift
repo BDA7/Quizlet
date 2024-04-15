@@ -16,19 +16,23 @@ final class NavigationModule: ObservableObject {
     private init() {}
     
     public func navigateTo(_ action: NavigationActions) {
-        switch action {
-        
-        case .showScreen(.auth):
-            screens = [.auth]
-        case .showScreen(.home):
-            screens = [.home]
-        case .showScreen(.register):
-            screens.append(.register)
-        case .dismissScreen:
-            screens.removeLast()
-        case .showScreen(.questionsByTheme(let id)):
-            screens.append(.questionsByTheme(id: id))
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            switch action {
+            
+            case .showScreen(.auth):
+                screens = [.auth]
+            case .showScreen(.home):
+                screens = [.home]
+            case .showScreen(.register):
+                screens.append(.register)
+            case .dismissScreen:
+                screens.removeLast()
+            case .showScreen(.questionsByTheme(let id)):
+                screens.append(.questionsByTheme(id: id))
+            }
         }
+        
     }
 
 }

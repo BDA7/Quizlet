@@ -23,7 +23,11 @@ extension ActiveScreensState {
                 screens += [.register(RegisterViewState())]
             case .showScreen(.questionsByTheme(let id)):
                 screens += [.questionsByTheme(QuestionsByThemeState(id: id))]
-            case .dismissScreen(.auth), .showScreen(.splash), .dismissScreen(.splash), .dismissScreen(.home):
+            case .showScreen(.profile):
+                screens = [.profile(ProfileViewState())]
+            case .showScreen(.results):
+                screens = [.results(ResultsViewState())]
+            case .dismissScreen(.auth), .showScreen(.splash), .dismissScreen(.splash), .dismissScreen(.home), .dismissScreen(.profile), .dismissScreen(.results):
                 screens = [.splash(SplashViewState())]
             }
             

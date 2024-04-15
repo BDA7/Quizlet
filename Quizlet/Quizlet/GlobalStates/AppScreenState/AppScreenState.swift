@@ -13,6 +13,8 @@ enum AppScreenState {
     case home(HomeViewState)
     case register(RegisterViewState)
     case questionsByTheme(QuestionsByThemeState)
+    case profile(ProfileViewState)
+    case results(ResultsViewState)
 }
 
 extension AppScreenState: CustomStringConvertible {
@@ -28,6 +30,10 @@ extension AppScreenState: CustomStringConvertible {
             return "Register View"
         case .questionsByTheme(let state):
             return "Questions View \(state.themeId)"
+        case .profile:
+            return "Profile View"
+        case .results:
+            return "Results View"
         }
     }
 }
@@ -35,10 +41,10 @@ extension AppScreenState: CustomStringConvertible {
 extension AppScreenState {
     static func == (lhs: AppScreenState, rhs: AppScreen) -> Bool {
         switch (lhs, rhs) {
-        case (.splash, .splash), (.auth, .auth), (.home, .home), (.register, .register):
+        case (.splash, .splash), (.auth, .auth), (.home, .home), (.register, .register), (.profile, .profile), (.results, .results):
             return true
         case (.questionsByTheme(let state), .questionsByTheme(let id)): return state.themeId == id
-        case (.splash, _), (.auth, _), (.home, _), (.register, _), (.questionsByTheme, _):
+        case (.splash, _), (.auth, _), (.home, _), (.register, _), (.questionsByTheme, _), (.profile, _), (.results, _):
             return false
         }
     }

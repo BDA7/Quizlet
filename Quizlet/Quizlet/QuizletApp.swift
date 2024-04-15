@@ -11,7 +11,10 @@ import QuizletRedux
 let store = Store(
     initial: AppState(),
     reducer: AppState.reducer,
-    middlewares: [Middlewares.authorization, Middlewares.logger, Middlewares.questions]
+    middlewares: [Middlewares.authorization, Middlewares.logger, 
+                  Middlewares.questions, Middlewares.results,
+                  Middlewares.profile
+                 ]
 )
 
 struct FlowView: View {
@@ -20,7 +23,10 @@ struct FlowView: View {
     var body: some View {
         if store.publicState.screenState(for: .auth) as AuthViewState? != nil {
             authFlow
-        } else if store.publicState.screenState(for: .home) as HomeViewState? != nil {
+        } else if store.publicState.screenState(for: .home) as HomeViewState? != nil ||
+                    store.publicState.screenState(for: .profile) as ProfileViewState? != nil ||
+                    store.publicState.screenState(for: .results) as ResultsViewState? != nil
+        {
             homeFlow
         } else {
             SplashView()

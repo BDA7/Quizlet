@@ -18,6 +18,19 @@
 		FE05E8882BCD936200373FDD /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8872BCD936200373FDD /* ProfileModel.swift */; };
 		FE05E88A2BCD936D00373FDD /* ProfileModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8892BCD936D00373FDD /* ProfileModelRealm.swift */; };
 		FE05E88D2BCD96D900373FDD /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E88C2BCD96D900373FDD /* AuthRepository.swift */; };
+		FE05E88F2BCD9A5A00373FDD /* QuestionResultModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E88E2BCD9A5A00373FDD /* QuestionResultModelRealm.swift */; };
+		FE05E8912BCD9A6B00373FDD /* QuestionResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8902BCD9A6B00373FDD /* QuestionResultModel.swift */; };
+		FE05E8932BCD9FE200373FDD /* ResultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8922BCD9FE200373FDD /* ResultsRepository.swift */; };
+		FE05E8952BCDA1AE00373FDD /* ResultsMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8942BCDA1AE00373FDD /* ResultsMiddleware.swift */; };
+		FE05E8972BCDA1F300373FDD /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8962BCDA1F300373FDD /* ProfileRepository.swift */; };
+		FE05E8992BCDA30F00373FDD /* ProfileMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8982BCDA30F00373FDD /* ProfileMiddleware.swift */; };
+		FE05E89B2BCDA35200373FDD /* ProfileViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E89A2BCDA35200373FDD /* ProfileViewState.swift */; };
+		FE05E89D2BCDA36400373FDD /* ProfileViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E89C2BCDA36400373FDD /* ProfileViewStateAction.swift */; };
+		FE05E89F2BCDA37C00373FDD /* ProfileViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E89E2BCDA37C00373FDD /* ProfileViewStateReducer.swift */; };
+		FE05E8A22BCDA7AB00373FDD /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A12BCDA7AB00373FDD /* ResultsView.swift */; };
+		FE05E8A62BCDA7C100373FDD /* ResultsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A52BCDA7C100373FDD /* ResultsViewState.swift */; };
+		FE05E8A82BCDA7CF00373FDD /* ResultsViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A72BCDA7CF00373FDD /* ResultsViewStateAction.swift */; };
+		FE05E8AA2BCDA7E200373FDD /* ResultsViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A92BCDA7E200373FDD /* ResultsViewStateReducer.swift */; };
 		FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */; };
 		FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */; };
 		FEBE10B12BCA8EC300C75D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */; };
@@ -79,6 +92,19 @@
 		FE05E8872BCD936200373FDD /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		FE05E8892BCD936D00373FDD /* ProfileModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModelRealm.swift; sourceTree = "<group>"; };
 		FE05E88C2BCD96D900373FDD /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		FE05E88E2BCD9A5A00373FDD /* QuestionResultModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultModelRealm.swift; sourceTree = "<group>"; };
+		FE05E8902BCD9A6B00373FDD /* QuestionResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionResultModel.swift; sourceTree = "<group>"; };
+		FE05E8922BCD9FE200373FDD /* ResultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsRepository.swift; sourceTree = "<group>"; };
+		FE05E8942BCDA1AE00373FDD /* ResultsMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsMiddleware.swift; sourceTree = "<group>"; };
+		FE05E8962BCDA1F300373FDD /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		FE05E8982BCDA30F00373FDD /* ProfileMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMiddleware.swift; sourceTree = "<group>"; };
+		FE05E89A2BCDA35200373FDD /* ProfileViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewState.swift; sourceTree = "<group>"; };
+		FE05E89C2BCDA36400373FDD /* ProfileViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewStateAction.swift; sourceTree = "<group>"; };
+		FE05E89E2BCDA37C00373FDD /* ProfileViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewStateReducer.swift; sourceTree = "<group>"; };
+		FE05E8A12BCDA7AB00373FDD /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		FE05E8A52BCDA7C100373FDD /* ResultsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewState.swift; sourceTree = "<group>"; };
+		FE05E8A72BCDA7CF00373FDD /* ResultsViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewStateAction.swift; sourceTree = "<group>"; };
+		FE05E8A92BCDA7E200373FDD /* ResultsViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewStateReducer.swift; sourceTree = "<group>"; };
 		FEBE10A92BCA8EC200C75D9C /* Quizlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizletApp.swift; sourceTree = "<group>"; };
 		FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +225,9 @@
 		FE05E8862BCD934100373FDD /* State */ = {
 			isa = PBXGroup;
 			children = (
+				FE05E89A2BCDA35200373FDD /* ProfileViewState.swift */,
+				FE05E89C2BCDA36400373FDD /* ProfileViewStateAction.swift */,
+				FE05E89E2BCDA37C00373FDD /* ProfileViewStateReducer.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -207,8 +236,38 @@
 			isa = PBXGroup;
 			children = (
 				FE05E88C2BCD96D900373FDD /* AuthRepository.swift */,
+				FEFE310C2BCC489D000DCAE3 /* QuestionsRepository.swift */,
+				FE05E8922BCD9FE200373FDD /* ResultsRepository.swift */,
+				FE05E8962BCDA1F300373FDD /* ProfileRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FE05E8A02BCDA79F00373FDD /* ResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				FE05E8A42BCDA7B600373FDD /* State */,
+				FE05E8A32BCDA7AF00373FDD /* View */,
+			);
+			path = ResultsView;
+			sourceTree = "<group>";
+		};
+		FE05E8A32BCDA7AF00373FDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE05E8A12BCDA7AB00373FDD /* ResultsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE05E8A42BCDA7B600373FDD /* State */ = {
+			isa = PBXGroup;
+			children = (
+				FE05E8A52BCDA7C100373FDD /* ResultsViewState.swift */,
+				FE05E8A72BCDA7CF00373FDD /* ResultsViewStateAction.swift */,
+				FE05E8A92BCDA7E200373FDD /* ResultsViewStateReducer.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		FEBE10A02BCA8EC200C75D9C = {
@@ -267,6 +326,7 @@
 		FEBE10D52BCA9CF000C75D9C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FE05E8A02BCDA79F00373FDD /* ResultsView */,
 				FE05E8822BCD933000373FDD /* ProfileView */,
 				FE05E87F2BCD911100373FDD /* MainTabView */,
 				FE0556A62BCC721400126D7A /* QuestionsByTheme */,
@@ -385,6 +445,8 @@
 				FECFEEA22BCB45CA00DF65DF /* AuthorizationMiddleware.swift */,
 				FECFEEAF2BCB49C100DF65DF /* LoggerMiddleware.swift */,
 				FEFE310E2BCC4A88000DCAE3 /* QuestionsMiddleware.swift */,
+				FE05E8942BCDA1AE00373FDD /* ResultsMiddleware.swift */,
+				FE05E8982BCDA30F00373FDD /* ProfileMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -451,7 +513,6 @@
 				FEFE31052BCC463E000DCAE3 /* Models */,
 				FEFE30FE2BCC3F4D000DCAE3 /* RealmModels */,
 				FEFE30FC2BCC3F0E000DCAE3 /* RealmService.swift */,
-				FEFE310C2BCC489D000DCAE3 /* QuestionsRepository.swift */,
 			);
 			path = RealmData;
 			sourceTree = "<group>";
@@ -463,6 +524,7 @@
 				FEFE31012BCC4102000DCAE3 /* ThemeModelRealm.swift */,
 				FEFE31032BCC42A2000DCAE3 /* QuestionRealmModel.swift */,
 				FE05E8892BCD936D00373FDD /* ProfileModelRealm.swift */,
+				FE05E88E2BCD9A5A00373FDD /* QuestionResultModelRealm.swift */,
 			);
 			path = RealmModels;
 			sourceTree = "<group>";
@@ -474,6 +536,7 @@
 				FEFE31082BCC4662000DCAE3 /* ThemeModel.swift */,
 				FEFE310A2BCC467D000DCAE3 /* QuestionModel.swift */,
 				FE05E8872BCD936200373FDD /* ProfileModel.swift */,
+				FE05E8902BCD9A6B00373FDD /* QuestionResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -564,6 +627,7 @@
 				FECFEE902BCB409B00DF65DF /* SplashViewStateAction.swift in Sources */,
 				FECFEEAA2BCB472F00DF65DF /* HomeViewState.swift in Sources */,
 				FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */,
+				FE05E88F2BCD9A5A00373FDD /* QuestionResultModelRealm.swift in Sources */,
 				FECFEEB02BCB49C100DF65DF /* LoggerMiddleware.swift in Sources */,
 				FECFEE992BCB41B600DF65DF /* AppState.swift in Sources */,
 				FECFEEB62BCB4A5D00DF65DF /* RegisterViewState.swift in Sources */,
@@ -573,24 +637,33 @@
 				FEFE30FD2BCC3F0E000DCAE3 /* RealmService.swift in Sources */,
 				FECFEEAE2BCB475300DF65DF /* HomeViewStateReducer.swift in Sources */,
 				FE05E8812BCD912400373FDD /* MainTabView.swift in Sources */,
+				FE05E8AA2BCDA7E200373FDD /* ResultsViewStateReducer.swift in Sources */,
 				FECFEE812BCB3F5A00DF65DF /* AppScreenState.swift in Sources */,
 				FECFEE882BCB406900DF65DF /* ActiveScreensState.swift in Sources */,
 				FE05E88A2BCD936D00373FDD /* ProfileModelRealm.swift in Sources */,
 				FEFE31072BCC4645000DCAE3 /* ChapterModel.swift in Sources */,
+				FE05E89B2BCDA35200373FDD /* ProfileViewState.swift in Sources */,
+				FE05E8932BCD9FE200373FDD /* ResultsRepository.swift in Sources */,
 				FEFE31092BCC4662000DCAE3 /* ThemeModel.swift in Sources */,
 				FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */,
+				FE05E8992BCDA30F00373FDD /* ProfileMiddleware.swift in Sources */,
 				FECFEE942BCB412300DF65DF /* ActiveScreensStateAction.swift in Sources */,
 				FECFEE8A2BCB407A00DF65DF /* SplashView.swift in Sources */,
 				FEBE10D82BCA9D0100C75D9C /* AuthView.swift in Sources */,
 				FECFEE962BCB414200DF65DF /* ActiveScreensStateReducer.swift in Sources */,
 				FECFEEAC2BCB474000DF65DF /* HomeViewStateAction.swift in Sources */,
+				FE05E8952BCDA1AE00373FDD /* ResultsMiddleware.swift in Sources */,
+				FE05E8A62BCDA7C100373FDD /* ResultsViewState.swift in Sources */,
 				FEBE10D42BCA964600C75D9C /* ContentViewModel.swift in Sources */,
+				FE05E8A82BCDA7CF00373FDD /* ResultsViewStateAction.swift in Sources */,
 				FE0556AE2BCC734600126D7A /* QuestionsByThemeStateAction.swift in Sources */,
 				FECFEE7C2BCB3E9000DF65DF /* AuthViewState.swift in Sources */,
 				FECFEEBC2BCB4AA800DF65DF /* RegisterView.swift in Sources */,
 				FE05E88D2BCD96D900373FDD /* AuthRepository.swift in Sources */,
 				FE0556B22BCC7A9E00126D7A /* CurrentQuestionView.swift in Sources */,
 				FEFE31132BCC4E6D000DCAE3 /* ChapterGrid.swift in Sources */,
+				FE05E8912BCD9A6B00373FDD /* QuestionResultModel.swift in Sources */,
+				FE05E89F2BCDA37C00373FDD /* ProfileViewStateReducer.swift in Sources */,
 				FECFEEA02BCB451300DF65DF /* NavigationModule.swift in Sources */,
 				FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
@@ -605,8 +678,11 @@
 				FECFEE922BCB40AF00DF65DF /* SplashViewStateReducer.swift in Sources */,
 				FECFEEBA2BCB4A8000DF65DF /* RegisterViewStateReducer.swift in Sources */,
 				FECFEEA32BCB45CA00DF65DF /* AuthorizationMiddleware.swift in Sources */,
+				FE05E8972BCDA1F300373FDD /* ProfileRepository.swift in Sources */,
 				FECFEE9B2BCB41C400DF65DF /* AppStateReducer.swift in Sources */,
 				FEFE31042BCC42A2000DCAE3 /* QuestionRealmModel.swift in Sources */,
+				FE05E89D2BCDA36400373FDD /* ProfileViewStateAction.swift in Sources */,
+				FE05E8A22BCDA7AB00373FDD /* ResultsView.swift in Sources */,
 				FE0556A52BCC6D2500126D7A /* ThemeCell.swift in Sources */,
 				FEFE310B2BCC467D000DCAE3 /* QuestionModel.swift in Sources */,
 			);
