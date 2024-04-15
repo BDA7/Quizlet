@@ -47,44 +47,44 @@ extension RealmService {
         ].forEach { addTheme($0.0, themeId: $0.1, chapterId: $0.2)}
         
         [
-            ("Какому протоколу соотвествует основная структура проекта, использующего SWiftUI Lifecycle", "App", "AnyObject", "UIApplicationDelegate", 0),
-            ("Какой атрибуты структуры определяет точку входа в приложение, использующее SwiftUI Lifecycle", "@main", "@entry", "@initial", 0),
-            ("Как в SwiftUI называется контейнер, который определяет свое содержимое как функцию соб", "", "", "", 1),
-            ("Как в SwiftUI называется контейнер, который определяет свое содержимое как функцию соб", "", "", "", 1),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 2),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 2),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 3),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 3),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 4),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 4),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 5),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 5),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 6),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 6),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 7),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 7),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 8),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 8),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 9),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 9),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 10),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 10),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 11),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 11),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 12),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 12),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 13),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 13),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 14),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 14),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 15),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 15),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 16),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 16),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 17),
-            ("Question", "Correct Answer", "Incorect", "Incorrect", 17),
+            ("Какому протоколу соотвествует основная структура проекта, использующего SWiftUI Lifecycle", "App", "AnyObject", "UIApplicationDelegate", "SwiftUI Essentials"),
+            ("Какой атрибуты структуры определяет точку входа в приложение, использующее SwiftUI Lifecycle", "@main", "@entry", "@initial", "SwiftUI Essentials"),
+            ("Как в SwiftUI называется контейнер, который определяет свое содержимое как функцию соб", "", "", "", "Drawing and Animation"),
+            ("Как в SwiftUI называется контейнер, который определяет свое содержимое как функцию соб", "", "", "", "Drawing and Animation"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Combine"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Combine"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "ViewController Lifecycle"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "ViewController Lifecycle"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "App Lifecycle"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "App Lifecycle"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Bounds And Frame"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Bounds And Frame"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "UIView"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "UIView"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Auto Layout"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Auto Layout"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Основы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Основы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Числовые и логические типы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Числовые и логические типы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Базовые операторы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Базовые операторы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Операторы Диапазона"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Операторы Диапазона"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Логические операторы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Логические операторы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Строки и символы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Строки и символы"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Коллекции"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Коллекции"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Множества"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Множества"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Словари"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Словари"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Кортежи"),
+            ("Question", "Correct Answer", "Incorect", "Incorrect", "Кортежи"),
 
-        ].forEach { addQuestion($0.0, correctAnswer: $0.1, incorrectAnswer: $0.2, incorrectAnswerTwo: $0.3, themeId: $0.4) }
+        ].forEach { addQuestion($0.0, correctAnswer: $0.1, incorrectAnswer: $0.2, incorrectAnswerTwo: $0.3, themeName: $0.4) }
     }
     
     func setupBaseSettings() {
@@ -142,14 +142,14 @@ extension RealmService {
         }
     }
     
-    func addQuestion(_ title: String, correctAnswer: String, incorrectAnswer: String, incorrectAnswerTwo: String, themeId: Int) {
+    func addQuestion(_ title: String, correctAnswer: String, incorrectAnswer: String, incorrectAnswerTwo: String, themeName: String) {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             
             let findingModels = realm.objects(QuestionRealmModel.self)
                 .filter { 
                     $0.title == title && $0.correctAnswer == correctAnswer &&
-                    $0.incorrectAnswer == incorrectAnswer && $0.themeId == themeId
+                    $0.incorrectAnswer == incorrectAnswer
                 }
             
             if findingModels.count > 0 {
@@ -158,8 +158,7 @@ extension RealmService {
             
             let realmModel = QuestionRealmModel(
                 title: title, correctAnswer: correctAnswer,
-                incorrectAnswer: incorrectAnswer, incorrectAnswerTwo: incorrectAnswerTwo,
-                themeId: themeId
+                incorrectAnswer: incorrectAnswer, incorrectAnswerTwo: incorrectAnswerTwo, themeName: themeName
             )
             
             try? realm.write({
@@ -168,12 +167,12 @@ extension RealmService {
         }
     }
     
-    func getQuestions(_ themeId: Int, _ completion: @escaping ([QuestionModel]) -> Void) {
+    func getQuestions(_ themeName: String, _ completion: @escaping ([QuestionModel]) -> Void) {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             
             let findingRealmModels = realm.objects(QuestionRealmModel.self)
-                .filter({$0.themeId == themeId })
+                .filter({$0.themeName == themeName })
             
             var resultArr: [QuestionModel] = []
             
@@ -181,8 +180,7 @@ extension RealmService {
                 resultArr.append(
                     QuestionModel(
                         title: $0.title, correctAnswer: $0.correctAnswer,
-                        incorrectAnswer: $0.incorrectAnswer, incorrectAnswerTwo: $0.incorrectAnswerTwo,
-                        themeId: $0.themeId
+                        incorrectAnswer: $0.incorrectAnswer, incorrectAnswerTwo: $0.incorrectAnswerTwo
                     )
                 )
             }
@@ -282,16 +280,18 @@ extension RealmService {
         realmQueue.async { [weak self] in
             guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
             
-            guard
-                let findingRealmModel = realm.objects(QuestionResultModelRealm.self).filter({
-                    $0.themeId == model.themeId && $0.userName == model.userName
-                }).first else {
-                    return
-                }
-            
-            try? realm.write({
-                findingRealmModel.finalScore = model.finalScore
-            })
+            if let findingRealmModel = realm.objects(QuestionResultModelRealm.self).filter({
+                $0.userName == model.userName && $0.themeName == model.themeName
+            }).first {
+                try? realm.write({
+                    findingRealmModel.finalScore = model.finalScore
+                })
+            } else {
+                let newModel = QuestionResultModelRealm(finalScore: model.finalScore, themeName: model.themeName, userName: model.userName)
+                try? realm.write({
+                    realm.add(newModel)
+                })
+            }
         }
     }
     
@@ -304,7 +304,7 @@ extension RealmService {
             let findingModels = realm.objects(QuestionResultModelRealm.self).filter({$0.userName == userName})
             
             for findingModel in findingModels {
-                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeId: findingModel.themeId, userName: findingModel.userName))
+                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeName: findingModel.themeName, userName: findingModel.userName))
             }
             
             completion(resultArr)
@@ -320,7 +320,7 @@ extension RealmService {
             let findingModels = realm.objects(QuestionResultModelRealm.self)
             
             for findingModel in findingModels {
-                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeId: findingModel.themeId, userName: findingModel.userName))
+                resultArr.append(QuestionResultModel(finalScore: findingModel.finalScore, themeName: findingModel.themeName, userName: findingModel.userName))
             }
             
             completion(resultArr)

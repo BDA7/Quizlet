@@ -8,13 +8,13 @@
 import Foundation
 
 struct QuestionsByThemeState {
-    let themeId: Int
+    let themeId: String
     let questions: [QuestionModel]
     let currentQuestion: QuestionModel?
 }
 
 extension QuestionsByThemeState {
-    init(id: Int) {
+    init(id: String) {
         themeId = id
         questions = []
         currentQuestion = nil

@@ -9,10 +9,12 @@ import Foundation
 
 struct ProfileViewState {
     let profileModel: ProfileModel?
+    let results: [QuestionResultModel]
 }
 
 extension ProfileViewState {
     init() {
         profileModel = nil
+        results = []
     }
 }

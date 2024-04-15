@@ -13,7 +13,7 @@ enum AppScreen: Hashable {
     case splash
     case home
     case register
-    case questionsByTheme(id: Int)
+    case questionsByTheme(id: String)
     case profile
     case results
 }

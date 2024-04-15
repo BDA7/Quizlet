@@ -31,6 +31,7 @@
 		FE05E8A62BCDA7C100373FDD /* ResultsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A52BCDA7C100373FDD /* ResultsViewState.swift */; };
 		FE05E8A82BCDA7CF00373FDD /* ResultsViewStateAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A72BCDA7CF00373FDD /* ResultsViewStateAction.swift */; };
 		FE05E8AA2BCDA7E200373FDD /* ResultsViewStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8A92BCDA7E200373FDD /* ResultsViewStateReducer.swift */; };
+		FE05E8AD2BCDB3D200373FDD /* ThemesResultsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05E8AC2BCDB3D200373FDD /* ThemesResultsChart.swift */; };
 		FEBE10AD2BCA8EC200C75D9C /* QuizletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */; };
 		FEBE10AF2BCA8EC200C75D9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */; };
 		FEBE10B12BCA8EC300C75D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBE10B02BCA8EC300C75D9C /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		FE05E8A52BCDA7C100373FDD /* ResultsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewState.swift; sourceTree = "<group>"; };
 		FE05E8A72BCDA7CF00373FDD /* ResultsViewStateAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewStateAction.swift; sourceTree = "<group>"; };
 		FE05E8A92BCDA7E200373FDD /* ResultsViewStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewStateReducer.swift; sourceTree = "<group>"; };
+		FE05E8AC2BCDB3D200373FDD /* ThemesResultsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesResultsChart.swift; sourceTree = "<group>"; };
 		FEBE10A92BCA8EC200C75D9C /* Quizlet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizlet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBE10AC2BCA8EC200C75D9C /* QuizletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizletApp.swift; sourceTree = "<group>"; };
 		FEBE10AE2BCA8EC200C75D9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -270,6 +272,14 @@
 			path = State;
 			sourceTree = "<group>";
 		};
+		FE05E8AB2BCDB3C900373FDD /* ChartsView */ = {
+			isa = PBXGroup;
+			children = (
+				FE05E8AC2BCDB3D200373FDD /* ThemesResultsChart.swift */,
+			);
+			path = ChartsView;
+			sourceTree = "<group>";
+		};
 		FEBE10A02BCA8EC200C75D9C = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +336,7 @@
 		FEBE10D52BCA9CF000C75D9C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FE05E8AB2BCDB3C900373FDD /* ChartsView */,
 				FE05E8A02BCDA79F00373FDD /* ResultsView */,
 				FE05E8822BCD933000373FDD /* ProfileView */,
 				FE05E87F2BCD911100373FDD /* MainTabView */,
@@ -668,6 +679,7 @@
 				FE0556AC2BCC733000126D7A /* QuestionsByThemeState.swift in Sources */,
 				FECFEE852BCB3FF000DF65DF /* AuthViewStateReducer.swift in Sources */,
 				FEFE31022BCC4102000DCAE3 /* ThemeModelRealm.swift in Sources */,
+				FE05E8AD2BCDB3D200373FDD /* ThemesResultsChart.swift in Sources */,
 				FECFEEB82BCB4A6D00DF65DF /* RegisterViewStateAction.swift in Sources */,
 				FE05E8882BCD936200373FDD /* ProfileModel.swift in Sources */,
 				FEFE310D2BCC489D000DCAE3 /* QuestionsRepository.swift in Sources */,

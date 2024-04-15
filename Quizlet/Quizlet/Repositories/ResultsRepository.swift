@@ -27,12 +27,6 @@ final class ResultsRepository: ObservableObject {
         .eraseToAnyPublisher()
     }
     
-    func addResult(_ resultModel: QuestionResultModel) -> AnyPublisher<Void, Never> {
-        RealmService.shared.addQuestionResult(resultModel)
-        
-        return Just(()).eraseToAnyPublisher()
-    }
-    
     func getAllResults() -> AnyPublisher<[QuestionResultModel], Never> {
         return Future<[QuestionResultModel], Never> { promise in
             RealmService.shared.getAllResults { results in
@@ -40,5 +34,12 @@ final class ResultsRepository: ObservableObject {
             }
         }
         .eraseToAnyPublisher()
+    }
+    
+    func updateResults(_ newFinalScore: Float, themeName: String) {
+        guard let userName = userDefaults.string(forKey: "currentUserName") else {
+            return
+        }
+        RealmService.shared.addQuestionResult(QuestionResultModel(finalScore: newFinalScore, themeName: themeName, userName: userName))
     }
 }

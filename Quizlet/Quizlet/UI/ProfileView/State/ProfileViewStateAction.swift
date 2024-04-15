@@ -11,4 +11,6 @@ import QuizletRedux
 enum ProfileViewStateAction: Action {
     case fetchProfile
     case updateProfile(_ profile: ProfileModel)
+    case fetchResults
+    case updateResults(results: [QuestionResultModel])
 }

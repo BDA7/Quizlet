@@ -68,7 +68,7 @@ struct CurrentQuestionView: View {
     CurrentQuestionView(
         currentQuestion: QuestionModel(
             title: "Какой-то вопрос", correctAnswer: "Верный ответ",
-            incorrectAnswer: "неверный ответ", incorrectAnswerTwo: "Неверный ответ 2", themeId: 0
+            incorrectAnswer: "неверный ответ", incorrectAnswerTwo: "Неверный ответ 2"
         ), 
         score: .constant(0), currentPage: .constant(0)
     )

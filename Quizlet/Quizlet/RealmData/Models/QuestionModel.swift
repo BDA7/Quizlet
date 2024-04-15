@@ -12,7 +12,6 @@ struct QuestionModel {
     let correctAnswer: String
     let incorrectAnswer: String
     let incorrectAnswerTwo: String
-    let themeId: Int
 }
 
 extension QuestionModel: Identifiable {

@@ -13,6 +13,16 @@ extension Middlewares {
     
     static let results: Middleware<AppState> = { state, action in
         switch action {
+        case ProfileViewStateAction.fetchResults:
+            return questionsRepository.getUserResults()
+                .map { results in
+                    ProfileViewStateAction.updateResults(results: results)
+                }
+                .eraseToAnyPublisher()
+        case QuestionsByThemeStateAction.updateResults(let finalScore, let themeName):
+            questionsRepository.updateResults(finalScore, themeName: themeName)
+            return Empty().eraseToAnyPublisher()
+                
         default: return Empty().eraseToAnyPublisher()
         }
     }

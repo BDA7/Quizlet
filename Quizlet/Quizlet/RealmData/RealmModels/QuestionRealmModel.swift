@@ -14,14 +14,14 @@ final class QuestionRealmModel: Object {
     @Persisted var correctAnswer: String
     @Persisted var incorrectAnswer: String
     @Persisted var incorrectAnswerTwo: String
-    @Persisted var themeId: Int
+    @Persisted var themeName: String
     
-    convenience init(title: String, correctAnswer: String, incorrectAnswer: String, incorrectAnswerTwo: String, themeId: Int) {
+    convenience init(title: String, correctAnswer: String, incorrectAnswer: String, incorrectAnswerTwo: String, themeName: String) {
         self.init()
         self.title = title
         self.correctAnswer = correctAnswer
         self.incorrectAnswer = incorrectAnswer
         self.incorrectAnswerTwo = incorrectAnswerTwo
-        self.themeId = themeId
+        self.themeName = themeName
     }
 }

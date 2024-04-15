@@ -22,6 +22,13 @@ struct ProfileView: View {
                 imageUserView
                 firstNameView
                 userNameView
+                
+                if let results = state?.results {
+                    ThemesResultsChart(resultsModels: results)
+                } else {
+                    Text("Not found results")
+                        .foregroundStyle(.gray)
+                }
                 Spacer()
             }
             .edgesIgnoringSafeArea(.top)
@@ -29,6 +36,7 @@ struct ProfileView: View {
         .onAppear {
             store.dispatch(ActiveScreensStateAction.showScreen(.profile))
             store.dispatch(ProfileViewStateAction.fetchProfile)
+            store.dispatch(ProfileViewStateAction.fetchResults)
         }
     }
     

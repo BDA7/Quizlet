@@ -42,7 +42,7 @@ extension NavigationModule {
         case register
         case home
         case auth
-        case questionsByTheme(id: Int)
+        case questionsByTheme(id: String)
     }
     
     enum NavigationActions {

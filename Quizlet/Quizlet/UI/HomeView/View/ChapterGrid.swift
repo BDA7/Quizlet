@@ -44,7 +44,7 @@ struct ChapterGrid: View {
             LazyVStack {
                 ForEach(themes) { theme in
                     ThemeCell(themeModel: theme, action: {
-                        NavigationModule.shared.navigateTo(.showScreen(.questionsByTheme(id: theme.id)))
+                        NavigationModule.shared.navigateTo(.showScreen(.questionsByTheme(id: theme.title)))
                     })
                 }
             }

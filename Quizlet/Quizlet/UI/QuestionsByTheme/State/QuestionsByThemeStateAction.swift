@@ -9,7 +9,8 @@ import Foundation
 import QuizletRedux
 
 enum QuestionsByThemeStateAction: Action {
-    case fetchQuestions(_ themeId: Int)
+    case fetchQuestions(_ themeId: String)
     case updateQuestions(_ questions: [QuestionModel])
     case changeCurrentQuestion(_ question: QuestionModel)
+    case updateResults(_ newFinalScore: Float, themeName: String)
 }

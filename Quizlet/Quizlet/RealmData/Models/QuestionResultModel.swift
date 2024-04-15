@@ -9,6 +9,12 @@ import Foundation
 
 struct QuestionResultModel {
     let finalScore: Float
-    let themeId: Int
+    let themeName: String
     let userName: String
+}
+
+extension QuestionResultModel: Identifiable {
+    var id: String {
+        return userName + themeName
+    }
 }

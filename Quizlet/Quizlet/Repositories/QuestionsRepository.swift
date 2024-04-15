@@ -27,7 +27,7 @@ final class QuestionsRepository: ObservableObject {
         .eraseToAnyPublisher()
     }
     
-    public func getQuestionsByTheme(_ themeId: Int) -> AnyPublisher<[QuestionModel], Never> {
+    public func getQuestionsByTheme(_ themeId: String) -> AnyPublisher<[QuestionModel], Never> {
         return Future<[QuestionModel], Never> { promise in
             RealmService.shared.getQuestions(themeId) { questions in
                 promise(.success(questions))

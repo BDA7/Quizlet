@@ -16,7 +16,7 @@ struct QuestionsByTheme: View {
     
     var state: QuestionsByThemeState? { store.publicState.screenState(for: .questionsByTheme(id: themeId)) }
     
-    let themeId: Int
+    let themeId: String
     
     var body: some View {
         ZStack {
@@ -26,6 +26,14 @@ struct QuestionsByTheme: View {
             Group {
                 if let questions = state?.questions, questions.count > 0, questions.count == currentPage {
                     finalScoreView
+                        .onAppear {
+                            store.dispatch(
+                                QuestionsByThemeStateAction.updateResults(
+                                    Float(currentPage) / Float(CGFloat(questions.count)),
+                                    themeName: themeId
+                                )
+                            )
+                        }
                 } else {
                     questionView
                 }
@@ -49,10 +57,14 @@ struct QuestionsByTheme: View {
     
     private var questionView: some View {
         VStack {
-            if let questions = state?.questions, questions.count > 0 {
+            if
+                let questions = state?.questions, questions.count > 0,
+                let themeId = state?.themeId
+            {
                 PageIdentifier(
                     percentage: (CGFloat(currentPage)/CGFloat(questions.count))
                 )
+                .environmentObject(store)
             }
             
             if let currentQuestion = state?.currentQuestion {
@@ -73,6 +85,6 @@ struct QuestionsByTheme: View {
 }
 
 #Preview {
-    QuestionsByTheme(themeId: 0)
+    QuestionsByTheme(themeId: "")
         .environmentObject(store)
 }

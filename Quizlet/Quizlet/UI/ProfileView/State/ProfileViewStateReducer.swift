@@ -12,7 +12,9 @@ extension ProfileViewState {
     static let reducer: Reducer<Self> = { state, action in
         switch action {
         case ProfileViewStateAction.updateProfile(let profileModel):
-            return ProfileViewState(profileModel: profileModel)
+            return ProfileViewState(profileModel: profileModel, results: state.results)
+        case ProfileViewStateAction.updateResults(let results):
+            return ProfileViewState(profileModel: state.profileModel, results: results)
         default: return state
         }
     }
