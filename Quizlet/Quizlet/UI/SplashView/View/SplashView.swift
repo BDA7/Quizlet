@@ -17,7 +17,7 @@ struct SplashView: View {
         Text("Splash Screen")
             .font(.title)
             .onAppear {
-                RealmService.shared.setupBaseModels()
+                RealmService.shared.setupBaseSettings()
                 store.dispatch(SplashViewStateAction.checkAuth)
             }
         

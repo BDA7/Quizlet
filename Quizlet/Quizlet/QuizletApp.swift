@@ -48,13 +48,10 @@ struct FlowView: View {
     
     private var homeFlow: some View {
         NavigationStack(path: $navigation.screens) {
-            HomeView()
+            MainTabView()
                 .environmentObject(store)
                 .navigationDestination(for: NavigationModule.NavigationCases.self) { val in
                     switch val {
-                    case .home:
-                        HomeView()
-                            .environmentObject(store)
                     case .questionsByTheme(let id):
                         QuestionsByTheme(themeId: id)
                     default: EmptyView()

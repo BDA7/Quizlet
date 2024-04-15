@@ -11,7 +11,7 @@ import QuizletRedux
 import QuizletNetworkLayer
 
 extension Middlewares {
-    private static let authRepository = AuthService()
+    private static let authRepository = AuthRepository()
     
     static let authorization: Middleware<AppState> = { state, action in
         switch action {
@@ -39,7 +39,7 @@ extension Middlewares {
                 }
                 .eraseToAnyPublisher()
         case AuthViewStateAction.authorize(let userName, let password):
-            return authRepository.authorize(userName, password: password)
+            return authRepository.authorize(userName: userName, password: password)
                 .map { _ in
                     NavigationModule.shared.navigateTo(.showScreen(.home))
                     return ActiveScreensStateAction.showScreen(.home)

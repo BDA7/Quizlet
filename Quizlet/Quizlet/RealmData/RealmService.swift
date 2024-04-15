@@ -86,6 +86,21 @@ extension RealmService {
 
         ].forEach { addQuestion($0.0, correctAnswer: $0.1, incorrectAnswer: $0.2, incorrectAnswerTwo: $0.3, themeId: $0.4) }
     }
+    
+    func setupBaseSettings() {
+        setupBaseModels()
+        setupBaseProfiles()
+    }
+    
+    func setupBaseProfiles() {
+        [
+            ProfileModel(userName: "danyxw", firstName: "Danila", password: "123"),
+            ProfileModel(userName: "anich", firstName: "Anna", password: "1234"),
+            ProfileModel(userName: "EVDOKIM", firstName: "Ivan", password: "123"),
+            ProfileModel(userName: "milk_barbie", firstName: "Maria", password: "123"),
+            ProfileModel(userName: "ganys_german", firstName: "German", password: "1234556"),
+        ].forEach { addProfile(profileModel: $0)}
+    }
 }
 
 extension RealmService {
@@ -203,6 +218,47 @@ extension RealmService {
             }
             
             completion(resultArr)
+        }
+    }
+}
+
+
+extension RealmService {
+    func addProfile(profileModel: ProfileModel) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            let findingRealmModels = realm.objects(ProfileModelRealm.self)
+                .filter { $0.userName == profileModel.userName }
+            
+            if findingRealmModels.count > 0 {
+                return
+            }
+            
+            let realmModel = ProfileModelRealm(userName: profileModel.userName, firstName: profileModel.firstName, password: profileModel.password)
+            
+            try? realm.write({
+                realm.add(realmModel)
+            })
+        }
+    }
+    
+    func getProfile(userName: String, password: String, _ completion: @escaping (ProfileModel?) -> Void) {
+        realmQueue.async { [weak self] in
+            guard let self = self, let realm = try? Realm(configuration: .init(deleteRealmIfMigrationNeeded: true), queue: self.realmQueue) else { return }
+            
+            guard 
+                let findingRealmModels = realm.objects(ProfileModelRealm.self).filter({ $0.userName == userName }).first else {
+                    completion(nil)
+                    return
+                }
+            
+            if findingRealmModels.password == password {
+                let profileModel = ProfileModel(userName: findingRealmModels.userName, firstName: findingRealmModels.firstName, password: findingRealmModels.password)
+                completion(profileModel)
+            }
+            
+            completion(nil)
         }
     }
 }
